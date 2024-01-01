@@ -1,0 +1,988 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8b7157a32, pid=17816, tid=0x0000000000006358
+#
+# JRE version: OpenJDK Runtime Environment (8.0_352-b08) (build 1.8.0_352-b08)
+# Java VM: OpenJDK 64-Bit Server VM (25.352-b08 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [igxelpicd64.dll+0xa7a32]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugzilla.redhat.com/enter_bug.cgi
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001e53068f000):  JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_native, id=25432, stack(0x00000045dbe00000,0x00000045dbf00000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x0000000000035898
+
+Registers:
+RAX=0x000001e53f2c46c8, RBX=0x000001e53f2c45c0, RCX=0x0000000000000000, RDX=0x00000000fffffff0
+RSP=0x00000045dbefe780, RBP=0x0000000000000000, RSI=0x000001e53f2c4b90, RDI=0x000001e533d42760
+R8 =0x0000000000000014, R9 =0x0000000000000000, R10=0x0000000000000000, R11=0x0000000000000246
+R12=0x000001e53433ae00, R13=0x000001e53f2bdcc0, R14=0x0000000000000d00, R15=0x0000000000000016
+RIP=0x00007ff8b7157a32, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x00000045dbefe780)
+0x00000045dbefe780:   000001e533df8900 0000000000000000
+0x00000045dbefe790:   0000000000000000 00007ff964632e44
+0x00000045dbefe7a0:   000001e53fe3c378 0000000072955bb9
+0x00000045dbefe7b0:   0000000000007fd8 00007ff964625401
+0x00000045dbefe7c0:   0000000000000016 0000000000000d24
+0x00000045dbefe7d0:   0000b80219600000 000001e53433aed8
+0x00000045dbefe7e0:   0000000000000000 0000000000000000
+0x00000045dbefe7f0:   00000045dbefe900 00007ff8b713d5df
+0x00000045dbefe800:   000001e533df8900 000001e533d42760
+0x00000045dbefe810:   00000045da777000 00007ff9645adf00
+0x00000045dbefe820:   00000045000016e8 00007ff900000000
+0x00000045dbefe830:   0000000000000000 00007ff9645adb04
+0x00000045dbefe840:   000001e513e30cbc 00000000000000c0
+0x00000045dbefe850:   000001e513e30cd4 000001e513e30c90
+0x00000045dbefe860:   00000045dbefe978 00000045dbefebb8
+0x00000045dbefe870:   00000045da748000 00007ff9645adf66 
+
+Instructions: (pc=0x00007ff8b7157a32)
+0x00007ff8b7157a12:   83 2d 01 00 00 4a 8d 04 cd 21 00 00 00 49 03 c1
+0x00007ff8b7157a22:   48 8d 04 c3 48 85 c0 0f 85 03 01 00 00 49 8b ca
+0x00007ff8b7157a32:   48 3b 8d 98 58 03 00 0f 87 fe 97 94 00 48 8d 93
+0x00007ff8b7157a42:   08 01 00 00 4c 39 93 48 06 00 00 0f 85 69 99 94 
+
+
+Register to memory mapping:
+
+RAX=0x000001e53f2c46c8 is an unknown value
+RBX=0x000001e53f2c45c0 is an unknown value
+RCX=0x0000000000000000 is an unknown value
+RDX=0x00000000fffffff0 is an unknown value
+RSP=0x00000045dbefe780 is pointing into the stack for thread: 0x000001e53068f000
+RBP=0x0000000000000000 is an unknown value
+RSI=0x000001e53f2c4b90 is an unknown value
+RDI=0x000001e533d42760 is an unknown value
+R8 =0x0000000000000014 is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000000246 is an unknown value
+R12=0x000001e53433ae00 is an unknown value
+R13=0x000001e53f2bdcc0 is an unknown value
+R14=0x0000000000000d00 is an unknown value
+R15=0x0000000000000016 is an unknown value
+
+
+Stack: [0x00000045dbe00000,0x00000045dbf00000],  sp=0x00000045dbefe780,  free space=1017k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000001e534599800 JavaThread "LWJGL3 Timer" daemon [_thread_blocked, id=6896, stack(0x00000045ddb00000,0x00000045ddc00000)]
+  0x000001e53079b800 JavaThread "Service Thread" daemon [_thread_blocked, id=24064, stack(0x00000045dcd00000,0x00000045dce00000)]
+  0x000001e53070a800 JavaThread "C1 CompilerThread11" daemon [_thread_blocked, id=24548, stack(0x00000045dcc00000,0x00000045dcd00000)]
+  0x000001e530707000 JavaThread "C1 CompilerThread10" daemon [_thread_blocked, id=25660, stack(0x00000045dcb00000,0x00000045dcc00000)]
+  0x000001e530709800 JavaThread "C1 CompilerThread9" daemon [_thread_blocked, id=6932, stack(0x00000045dca00000,0x00000045dcb00000)]
+  0x000001e5306f8000 JavaThread "C1 CompilerThread8" daemon [_thread_blocked, id=23928, stack(0x00000045dc900000,0x00000045dca00000)]
+  0x000001e5306c5000 JavaThread "C2 CompilerThread7" daemon [_thread_blocked, id=19944, stack(0x00000045dc800000,0x00000045dc900000)]
+  0x000001e5306bc000 JavaThread "C2 CompilerThread6" daemon [_thread_blocked, id=8580, stack(0x00000045dc700000,0x00000045dc800000)]
+  0x000001e5306b9800 JavaThread "C2 CompilerThread5" daemon [_thread_blocked, id=23316, stack(0x00000045dc600000,0x00000045dc700000)]
+  0x000001e5306b0800 JavaThread "C2 CompilerThread4" daemon [_thread_blocked, id=13316, stack(0x00000045dc500000,0x00000045dc600000)]
+  0x000001e5306ab800 JavaThread "C2 CompilerThread3" daemon [_thread_blocked, id=22068, stack(0x00000045dc400000,0x00000045dc500000)]
+  0x000001e5306a9000 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=21160, stack(0x00000045dc300000,0x00000045dc400000)]
+  0x000001e5306a5800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=23828, stack(0x00000045dc200000,0x00000045dc300000)]
+  0x000001e5306a2000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=27516, stack(0x00000045dc100000,0x00000045dc200000)]
+  0x000001e530691800 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=13260, stack(0x00000045dbf00000,0x00000045dc000000)]
+=>0x000001e53068f000 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_native, id=25432, stack(0x00000045dbe00000,0x00000045dbf00000)]
+  0x000001e53066e800 JavaThread "Attach Listener" daemon [_thread_blocked, id=14560, stack(0x00000045dbd00000,0x00000045dbe00000)]
+  0x000001e53066d800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2776, stack(0x00000045dbc00000,0x00000045dbd00000)]
+  0x000001e52eb88000 JavaThread "Finalizer" daemon [_thread_blocked, id=18228, stack(0x00000045dbb00000,0x00000045dbc00000)]
+  0x000001e5305f4800 JavaThread "Reference Handler" daemon [_thread_blocked, id=24160, stack(0x00000045dba00000,0x00000045dbb00000)]
+  0x000001e513f4a800 JavaThread "main" [_thread_blocked, id=22956, stack(0x00000045dab00000,0x00000045dac00000)]
+
+Other Threads:
+  0x000001e5305f3800 VMThread [stack: 0x00000045db900000,0x00000045dba00000] [id=15752]
+  0x000001e530769800 WatcherThread [stack: 0x00000045dce00000,0x00000045dcf00000] [id=2960]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000006c5e00000, size: 4002 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 75264K, used 8549K [0x000000076ca00000, 0x0000000771e00000, 0x00000007c0000000)
+  eden space 64512K, 2% used [0x000000076ca00000,0x000000076cbd6e98,0x0000000770900000)
+  from space 10752K, 61% used [0x0000000770900000,0x0000000770f82780,0x0000000771380000)
+  to   space 10752K, 0% used [0x0000000771380000,0x0000000771380000,0x0000000771e00000)
+ ParOldGen       total 172032K, used 48K [0x00000006c5e00000, 0x00000006d0600000, 0x000000076ca00000)
+  object space 172032K, 0% used [0x00000006c5e00000,0x00000006c5e0c010,0x00000006d0600000)
+ Metaspace       used 13843K, capacity 14098K, committed 14336K, reserved 1062912K
+  class space    used 1297K, capacity 1410K, committed 1536K, reserved 1048576K
+
+Card table byte_map: [0x000001e524e80000,0x000001e525660000] byte_map_base: 0x000001e521851000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000072eea0e0
+ Begin Bits: [0x000001e525ba0000, 0x000001e529a28000)
+ End Bits:   [0x000001e529a28000, 0x000001e52d8b0000)
+
+Polling page: 0x000001e5141f0000
+
+CodeCache: size=245760Kb used=7487Kb max_used=7487Kb free=238272Kb
+ bounds [0x000001e515ac0000, 0x000001e516220000, 0x000001e524ac0000]
+ total_blobs=2316 nmethods=1326 adapters=906
+ compilation: enabled
+
+Compilation events (250 events):
+Event: 2.452 Thread 0x000001e530709800 1186       1       com.badlogic.gdx.scenes.scene2d.ui.Button::isChecked (5 bytes)
+Event: 2.452 Thread 0x000001e530709800 nmethod 1186 0x000001e51617d690 code [0x000001e51617d7e0, 0x000001e51617d8f8]
+Event: 2.452 Thread 0x000001e530707000 nmethod 1184 0x000001e51617d290 code [0x000001e51617d400, 0x000001e51617d5d0]
+Event: 2.453 Thread 0x000001e5306f8000 nmethod 1185 0x000001e51617ad50 code [0x000001e51617b060, 0x000001e51617c610]
+Event: 2.468 Thread 0x000001e53070a800 1187       1       com.badlogic.gdx.scenes.scene2d.Actor::getTouchable (5 bytes)
+Event: 2.469 Thread 0x000001e53070a800 nmethod 1187 0x000001e51617aa90 code [0x000001e51617abe0, 0x000001e51617acf8]
+Event: 2.469 Thread 0x000001e530709800 1188       3       com.badlogic.gdx.graphics.Color::toFloatBits (50 bytes)
+Event: 2.469 Thread 0x000001e530709800 nmethod 1188 0x000001e51617a550 code [0x000001e51617a700, 0x000001e51617a9d8]
+Event: 2.485 Thread 0x000001e530707000 1189       3       com.badlogic.gdx.math.Vector3::set (17 bytes)
+Event: 2.485 Thread 0x000001e530707000 nmethod 1189 0x000001e51617a110 code [0x000001e51617a280, 0x000001e51617a478]
+Event: 2.519 Thread 0x000001e53070a800 1190       3       com.badlogic.gdx.utils.IntArray::clear (6 bytes)
+Event: 2.519 Thread 0x000001e5306f8000 1191       1       com.badlogic.gdx.scenes.scene2d.Actor::getColor (5 bytes)
+Event: 2.519 Thread 0x000001e5306f8000 nmethod 1191 0x000001e51618b5d0 code [0x000001e51618b720, 0x000001e51618b838]
+Event: 2.519 Thread 0x000001e53070a800 nmethod 1190 0x000001e51618b290 code [0x000001e51618b3e0, 0x000001e51618b538]
+Event: 2.553 Thread 0x000001e530709800 1192       3       com.badlogic.gdx.utils.Pool::obtain (25 bytes)
+Event: 2.553 Thread 0x000001e530709800 nmethod 1192 0x000001e51618ad10 code [0x000001e51618ae80, 0x000001e51618b1c0]
+Event: 2.553 Thread 0x000001e530709800 1193       1       com.badlogic.gdx.scenes.scene2d.Actor::getStage (5 bytes)
+Event: 2.553 Thread 0x000001e530709800 nmethod 1193 0x000001e51618aa50 code [0x000001e51618aba0, 0x000001e51618acb8]
+Event: 2.569 Thread 0x000001e530709800 1194       3       com.badlogic.gdx.math.Vector3::nor (32 bytes)
+Event: 2.569 Thread 0x000001e530707000 1196       3       java.lang.Math::round (56 bytes)
+Event: 2.569 Thread 0x000001e530709800 nmethod 1194 0x000001e51618a350 code [0x000001e51618a500, 0x000001e51618a8f8]
+Event: 2.569 Thread 0x000001e530709800 1195       3       com.badlogic.gdx.math.Vector3::len2 (30 bytes)
+Event: 2.569 Thread 0x000001e530709800 nmethod 1195 0x000001e516189fd0 code [0x000001e51618a120, 0x000001e51618a2b8]
+Event: 2.569 Thread 0x000001e530707000 nmethod 1196 0x000001e516189b90 code [0x000001e516189d00, 0x000001e516189f38]
+Event: 2.585 Thread 0x000001e530709800 1197       3       com.badlogic.gdx.graphics.g2d.SpriteBatch::flush (193 bytes)
+Event: 2.585 Thread 0x000001e5306f8000 1198       1       com.badlogic.gdx.graphics.g2d.BitmapFont::getRegions (5 bytes)
+Event: 2.585 Thread 0x000001e5306f8000 nmethod 1198 0x000001e5161898d0 code [0x000001e516189a20, 0x000001e516189b38]
+Event: 2.586 Thread 0x000001e530709800 nmethod 1197 0x000001e516187c50 code [0x000001e516187f00, 0x000001e516188f80]
+Event: 2.619 Thread 0x000001e530707000 1199       3       com.badlogic.gdx.graphics.Color::set (34 bytes)
+Event: 2.619 Thread 0x000001e530707000 nmethod 1199 0x000001e5161878d0 code [0x000001e516187a20, 0x000001e516187bb8]
+Event: 2.665 Thread 0x000001e53070a800 1200       3       java.nio.Buffer::clear (20 bytes)
+Event: 2.665 Thread 0x000001e53070a800 nmethod 1200 0x000001e516187590 code [0x000001e5161876e0, 0x000001e516187858]
+Event: 2.687 Thread 0x000001e5306f8000 1201       3       java.nio.DirectIntBufferU::ix (10 bytes)
+Event: 2.687 Thread 0x000001e5306f8000 nmethod 1201 0x000001e516187250 code [0x000001e5161873a0, 0x000001e516187518]
+Event: 2.718 Thread 0x000001e530709800 1202       3       com.badlogic.gdx.graphics.g2d.freetype.FreeType$GlyphMetrics::getHeight (8 bytes)
+Event: 2.718 Thread 0x000001e530709800 nmethod 1202 0x000001e516186ed0 code [0x000001e516187040, 0x000001e5161871d0]
+Event: 2.739 Thread 0x000001e530707000 1205       3       com.badlogic.gdx.graphics.g2d.freetype.FreeType$Face::getGlyph (15 bytes)
+Event: 2.739 Thread 0x000001e530707000 nmethod 1205 0x000001e5161abe90 code [0x000001e5161ac020, 0x000001e5161ac350]
+Event: 2.760 Thread 0x000001e53070a800 1209       3       java.nio.ByteBuffer::get (54 bytes)
+Event: 2.760 Thread 0x000001e5306f8000 1208       3       com.badlogic.gdx.graphics.g2d.freetype.FreeType::toInt (11 bytes)
+Event: 2.760 Thread 0x000001e530709800 1210       3       com.badlogic.gdx.utils.Array::peek (29 bytes)
+Event: 2.760 Thread 0x000001e5306f8000 nmethod 1208 0x000001e5161ab390 code [0x000001e5161ab4e0, 0x000001e5161ab618]
+Event: 2.760 Thread 0x000001e53070a800 nmethod 1209 0x000001e5161aa710 code [0x000001e5161aa8e0, 0x000001e5161aafb0]
+Event: 2.760 Thread 0x000001e53070a800 1211       3       java.nio.DirectByteBuffer::<init> (24 bytes)
+Event: 2.760 Thread 0x000001e53070a800 nmethod 1211 0x000001e5161aa150 code [0x000001e5161aa2c0, 0x000001e5161aa5b0]
+Event: 2.760 Thread 0x000001e530709800 nmethod 1210 0x000001e5161a9b90 code [0x000001e5161a9d20, 0x000001e5161a9fd0]
+Event: 2.761 Thread 0x000001e5306f8000 1213       3       com.badlogic.gdx.graphics.g2d.freetype.FreeType$Bitmap::getPixmap (480 bytes)
+Event: 2.761 Thread 0x000001e530707000 1212       1       com.badlogic.gdx.graphics.g2d.Gdx2DPixmap::getFormat (5 bytes)
+Event: 2.761 Thread 0x000001e530707000 nmethod 1212 0x000001e5161a98d0 code [0x000001e5161a9a20, 0x000001e5161a9b38]
+Event: 2.761 Thread 0x000001e530709800 1214       1       com.badlogic.gdx.graphics.g2d.Gdx2DPixmap::getPixels (5 bytes)
+Event: 2.761 Thread 0x000001e530709800 nmethod 1214 0x000001e5161a9610 code [0x000001e5161a9760, 0x000001e5161a9878]
+Event: 2.762 Thread 0x000001e5306f8000 nmethod 1213 0x000001e5161a33d0 code [0x000001e5161a3960, 0x000001e5161a6c30]
+Event: 2.771 Thread 0x000001e53070a800 1216       1       com.badlogic.gdx.graphics.g2d.PixmapPacker::getPages (5 bytes)
+Event: 2.771 Thread 0x000001e53070a800 nmethod 1216 0x000001e5161a2d10 code [0x000001e5161a2e60, 0x000001e5161a2f78]
+Event: 2.785 Thread 0x000001e53070a800 1219       3       com.badlogic.gdx.graphics.g2d.freetype.FreeType$Bitmap::getWidth (8 bytes)
+Event: 2.785 Thread 0x000001e53070a800 nmethod 1219 0x000001e5161a2190 code [0x000001e5161a2300, 0x000001e5161a2490]
+Event: 2.785 Thread 0x000001e53070a800 1220       3       com.badlogic.gdx.graphics.Pixmap::drawPixmap (18 bytes)
+Event: 2.785 Thread 0x000001e53070a800 nmethod 1220 0x000001e5161a1910 code [0x000001e5161a1aa0, 0x000001e5161a1e90]
+Event: 2.785 Thread 0x000001e53070a800 1223       3       com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator$FreeTypeBitmapFontData::getGlyph (271 bytes)
+Event: 2.785 Thread 0x000001e530707000 1224   !   3       com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator::createGlyph (1207 bytes)
+Event: 2.785 Thread 0x000001e530709800 1225       3       com.badlogic.gdx.graphics.g2d.freetype.FreeType$Face::getCharIndex (9 bytes)
+Event: 2.785 Thread 0x000001e5306f8000 1221       3       com.badlogic.gdx.graphics.Pixmap::drawPixmap (22 bytes)
+Event: 2.785 Thread 0x000001e530709800 nmethod 1225 0x000001e5161a1550 code [0x000001e5161a16c0, 0x000001e5161a1870]
+Event: 2.785 Thread 0x000001e530709800 1222       3       com.badlogic.gdx.graphics.g2d.Gdx2DPixmap::drawPixmap (26 bytes)
+Event: 2.785 Thread 0x000001e530709800 nmethod 1222 0x000001e5161a10d0 code [0x000001e5161a1240, 0x000001e5161a1450]
+Event: 2.785 Thread 0x000001e530709800 1226       3       com.badlogic.gdx.graphics.g2d.BitmapFont$BitmapFontData::setGlyphRegion (402 bytes)
+Event: 2.785 Thread 0x000001e5306f8000 nmethod 1221 0x000001e5161a0ad0 code [0x000001e5161a0c40, 0x000001e5161a0ed0]
+Event: 2.785 Thread 0x000001e5306f8000 1227       3       com.badlogic.gdx.graphics.glutils.PixmapTextureData::getWidth (8 bytes)
+Event: 2.785 Thread 0x000001e5306f8000 nmethod 1227 0x000001e5161a0650 code [0x000001e5161a07c0, 0x000001e5161a09b8]
+Event: 2.785 Thread 0x000001e5306f8000 1228       3       com.badlogic.gdx.graphics.glutils.PixmapTextureData::getHeight (8 bytes)
+Event: 2.786 Thread 0x000001e5306f8000 nmethod 1228 0x000001e5161a01d0 code [0x000001e5161a0340, 0x000001e5161a0538]
+Event: 2.786 Thread 0x000001e53070a800 nmethod 1223 0x000001e51619e290 code [0x000001e51619e540, 0x000001e51619f670]
+Event: 2.786 Thread 0x000001e530709800 nmethod 1226 0x000001e51619cdd0 code [0x000001e51619d000, 0x000001e51619de20]
+Event: 2.786 Thread 0x000001e530709800 1229       3       java.io.InputStreamReader::read (11 bytes)
+Event: 2.786 Thread 0x000001e530709800 nmethod 1229 0x000001e51619c9d0 code [0x000001e51619cb40, 0x000001e51619cd10]
+Event: 2.786 Thread 0x000001e530709800 1230   !   3       sun.nio.cs.StreamDecoder::read (196 bytes)
+Event: 2.786 Thread 0x000001e5306f8000 1231       3       sun.nio.cs.StreamDecoder::ensureOpen (18 bytes)
+Event: 2.786 Thread 0x000001e5306f8000 nmethod 1231 0x000001e51619c510 code [0x000001e51619c680, 0x000001e51619c8f0]
+Event: 2.787 Thread 0x000001e530709800 nmethod 1230 0x000001e51619ac10 code [0x000001e51619ae40, 0x000001e51619bd30]
+Event: 2.787 Thread 0x000001e530709800 1232       3       sun.nio.cs.StreamDecoder::implRead (243 bytes)
+Event: 2.787 Thread 0x000001e53070a800 1233       3       java.nio.CharBuffer::<init> (22 bytes)
+Event: 2.787 Thread 0x000001e5306f8000 1234       3       java.lang.StringBuilder::append (10 bytes)
+Event: 2.787 Thread 0x000001e5306a5800 1239       4       java.lang.String::toCharArray (25 bytes)
+Event: 2.787 Thread 0x000001e5306bc000 1240       4       java.lang.StringBuilder::append (8 bytes)
+Event: 2.787 Thread 0x000001e5306f8000 nmethod 1234 0x000001e51619a850 code [0x000001e51619a9c0, 0x000001e51619ab70]
+Event: 2.787 Thread 0x000001e5306f8000 1235       3       java.util.regex.Matcher::start (22 bytes)
+Event: 2.787 Thread 0x000001e53070a800 nmethod 1233 0x000001e51619a450 code [0x000001e51619a5c0, 0x000001e51619a7b0]
+Event: 2.787 Thread 0x000001e53070a800 1236       3       java.lang.String::subSequence (7 bytes)
+Event: 2.787 Thread 0x000001e53070a800 nmethod 1236 0x000001e51619a010 code [0x000001e51619a180, 0x000001e51619a3b0]
+Event: 2.787 Thread 0x000001e53070a800 1237       3       java.util.regex.Matcher::find (69 bytes)
+Event: 2.787 Thread 0x000001e5306f8000 nmethod 1235 0x000001e516199b10 code [0x000001e516199c80, 0x000001e516199ef0]
+Event: 2.787 Thread 0x000001e5306f8000 1238       3       java.util.regex.Pattern$LastNode::match (45 bytes)
+Event: 2.788 Thread 0x000001e530709800 nmethod 1232 0x000001e516197790 code [0x000001e516197a40, 0x000001e5161990f0]
+Event: 2.788 Thread 0x000001e53070a800 nmethod 1237 0x000001e516197150 code [0x000001e5161972c0, 0x000001e516197670]
+Event: 2.788 Thread 0x000001e5306f8000 nmethod 1238 0x000001e516196c50 code [0x000001e516196dc0, 0x000001e516196ff8]
+Event: 2.788 Thread 0x000001e5306a5800 nmethod 1239 0x000001e516193b90 code [0x000001e516193ce0, 0x000001e516193e38]
+Event: 2.790 Thread 0x000001e5306bc000 nmethod 1240 0x000001e516192f50 code [0x000001e5161930a0, 0x000001e516193638]
+Event: 2.791 Thread 0x000001e530707000 nmethod 1224 0x000001e5161d4410 code [0x000001e5161d5100, 0x000001e5161dc7c0]
+Event: 2.796 Thread 0x000001e53070a800 1241       3       com.badlogic.gdx.utils.Pool::reset (17 bytes)
+Event: 2.796 Thread 0x000001e53070a800 nmethod 1241 0x000001e5161d3d10 code [0x000001e5161d3ea0, 0x000001e5161d4310]
+Event: 2.839 Thread 0x000001e530709800 1242       3       com.badlogic.gdx.graphics.g2d.BitmapFont$BitmapFontData::getGlyphs (269 bytes)
+Event: 2.839 Thread 0x000001e530709800 nmethod 1242 0x000001e5161954d0 code [0x000001e516195700, 0x000001e516196420]
+Event: 2.856 Thread 0x000001e5306f8000 1243       1       com.badlogic.gdx.graphics.VertexAttributes::get (7 bytes)
+Event: 2.856 Thread 0x000001e5306f8000 nmethod 1243 0x000001e516192c10 code [0x000001e516192d60, 0x000001e516192e98]
+Event: 2.956 Thread 0x000001e5306f8000 1244       1       com.badlogic.gdx.graphics.glutils.ImmediateModeRenderer20::getMaxVertices (5 bytes)
+Event: 2.956 Thread 0x000001e530707000 1245       1       com.badlogic.gdx.graphics.glutils.ImmediateModeRenderer20::getNumVertices (5 bytes)
+Event: 2.956 Thread 0x000001e5306f8000 nmethod 1244 0x000001e516195210 code [0x000001e516195360, 0x000001e516195478]
+Event: 2.956 Thread 0x000001e530707000 nmethod 1245 0x000001e516194f50 code [0x000001e5161950a0, 0x000001e5161951b8]
+Event: 2.989 Thread 0x000001e5306f8000 1246       3       com.badlogic.gdx.utils.BufferUtils::copy (45 bytes)
+Event: 2.989 Thread 0x000001e53070a800 1248       3       com.badlogic.gdx.graphics.Mesh::bind (7 bytes)
+Event: 2.989 Thread 0x000001e530707000 1249       3       com.badlogic.gdx.graphics.Mesh::bind (63 bytes)
+Event: 2.989 Thread 0x000001e530709800 1250       3       com.badlogic.gdx.graphics.Mesh::unbind (7 bytes)
+Event: 2.989 Thread 0x000001e53070a800 nmethod 1248 0x000001e516194750 code [0x000001e5161948c0, 0x000001e516194a90]
+Event: 2.989 Thread 0x000001e5306f8000 nmethod 1246 0x000001e5161d3350 code [0x000001e5161d3500, 0x000001e5161d3b80]
+Event: 2.989 Thread 0x000001e5306f8000 1251       3       com.badlogic.gdx.graphics.Mesh::unbind (63 bytes)
+Event: 2.989 Thread 0x000001e530707000 nmethod 1249 0x000001e5161d2990 code [0x000001e5161d2b40, 0x000001e5161d3170]
+Event: 2.990 Thread 0x000001e530709800 nmethod 1250 0x000001e516194350 code [0x000001e5161944c0, 0x000001e516194690]
+Event: 2.990 Thread 0x000001e5306f8000 nmethod 1251 0x000001e5161e6e90 code [0x000001e5161e7040, 0x000001e5161e7670]
+Event: 3.122 Thread 0x000001e530707000 1252       3       com.badlogic.gdx.utils.IntArray::add (48 bytes)
+Event: 3.123 Thread 0x000001e530707000 nmethod 1252 0x000001e5161e90d0 code [0x000001e5161e92a0, 0x000001e5161e9830]
+Event: 3.189 Thread 0x000001e53070a800 1253       3       org.lwjgl.system.MemoryUtil::memAddress (13 bytes)
+Event: 3.189 Thread 0x000001e53070a800 nmethod 1253 0x000001e5161e9a90 code [0x000001e5161e9c00, 0x000001e5161e9eb8]
+Event: 3.205 Thread 0x000001e530709800 1254       3       java.nio.Bits::copyFromArray (70 bytes)
+Event: 3.206 Thread 0x000001e530709800 nmethod 1254 0x000001e5161e9fd0 code [0x000001e5161ea140, 0x000001e5161ea4d0]
+Event: 3.272 Thread 0x000001e5306f8000 1255       3       java.nio.DirectFloatBufferU::ix (10 bytes)
+Event: 3.272 Thread 0x000001e530707000 1256       3       java.nio.DirectFloatBufferU::put (157 bytes)
+Event: 3.272 Thread 0x000001e530709800 1257       3       java.nio.DirectFloatBufferU::order (19 bytes)
+Event: 3.272 Thread 0x000001e5306f8000 nmethod 1255 0x000001e516194010 code [0x000001e516194160, 0x000001e5161942d8]
+Event: 3.272 Thread 0x000001e530709800 nmethod 1257 0x000001e5161ea610 code [0x000001e5161ea780, 0x000001e5161ea9d8]
+Event: 3.272 Thread 0x000001e530707000 nmethod 1256 0x000001e5161eaa90 code [0x000001e5161eaca0, 0x000001e5161eb6f0]
+Event: 3.306 Thread 0x000001e5306f8000 1258       3       com.badlogic.gdx.graphics.glutils.ShaderProgram::setUniformMatrix (8 bytes)
+Event: 3.306 Thread 0x000001e53070a800 1259       3       com.badlogic.gdx.graphics.glutils.ShaderProgram::setUniformMatrix (12 bytes)
+Event: 3.306 Thread 0x000001e530709800 1260       3       com.badlogic.gdx.graphics.glutils.ShaderProgram::setUniformMatrix (25 bytes)
+Event: 3.306 Thread 0x000001e530707000 1261       3       com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glUniformMatrix4fv (17 bytes)
+Event: 3.306 Thread 0x000001e530707000 nmethod 1261 0x000001e5161ebc50 code [0x000001e5161ebe00, 0x000001e5161ec400]
+Event: 3.306 Thread 0x000001e530709800 nmethod 1260 0x000001e5161ec7d0 code [0x000001e5161ec9a0, 0x000001e5161ed170]
+Event: 3.306 Thread 0x000001e530709800 1262       3       com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::toFloatBuffer (49 bytes)
+Event: 3.306 Thread 0x000001e53070a800 nmethod 1259 0x000001e5161ed750 code [0x000001e5161ed940, 0x000001e5161ee240]
+Event: 3.306 Thread 0x000001e53070a800 1263       3       com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::ensureBufferCapacity (49 bytes)
+Event: 3.306 Thread 0x000001e5306f8000 nmethod 1258 0x000001e5161eea10 code [0x000001e5161eec20, 0x000001e5161ef4f0]
+Event: 3.306 Thread 0x000001e530709800 nmethod 1262 0x000001e5161efe10 code [0x000001e5161effa0, 0x000001e5161f04a0]
+Event: 3.306 Thread 0x000001e53070a800 nmethod 1263 0x000001e5161f0690 code [0x000001e5161f0860, 0x000001e5161f0f40]
+Event: 3.322 Thread 0x000001e5306f8000 1264       3       com.badlogic.gdx.graphics.glutils.IndexBufferObject::getNumIndices (19 bytes)
+Event: 3.323 Thread 0x000001e5306f8000 nmethod 1264 0x000001e5161f1210 code [0x000001e5161f1380, 0x000001e5161f15d8]
+Event: 3.422 Thread 0x000001e530707000 1267       3       com.badlogic.gdx.graphics.Mesh::render (323 bytes)
+Event: 3.423 Thread 0x000001e530707000 nmethod 1267 0x000001e5161f1e10 code [0x000001e5161f2200, 0x000001e5161f43b0]
+Event: 3.539 Thread 0x000001e530709800 1270       3       com.badlogic.gdx.backends.lwjgl3.Lwjgl3Graphics::getHeight (26 bytes)
+Event: 3.539 Thread 0x000001e53070a800 1271       3       com.badlogic.gdx.graphics.g2d.SpriteBatch::switchTexture (32 bytes)
+Event: 3.539 Thread 0x000001e5306f8000 1268       1       com.badlogic.gdx.backends.lwjgl3.Lwjgl3Graphics::getGL30 (5 bytes)
+Event: 3.539 Thread 0x000001e530709800 nmethod 1270 0x000001e5161f56d0 code [0x000001e5161f5840, 0x000001e5161f5a38]
+Event: 3.539 Thread 0x000001e530707000 1269       1       com.badlogic.gdx.backends.lwjgl3.Lwjgl3Graphics::getGL20 (5 bytes)
+Event: 3.539 Thread 0x000001e5306f8000 nmethod 1268 0x000001e5161f5b10 code [0x000001e5161f5c60, 0x000001e5161f5d78]
+Event: 3.539 Thread 0x000001e530707000 nmethod 1269 0x000001e5161f5dd0 code [0x000001e5161f5f20, 0x000001e5161f6038]
+Event: 3.539 Thread 0x000001e53070a800 nmethod 1271 0x000001e5161f6090 code [0x000001e5161f6260, 0x000001e5161f67d0]
+Event: 3.548 Thread 0x000001e5306f8000 1273       3       com.badlogic.gdx.graphics.glutils.VertexArray::setVertices (29 bytes)
+Event: 3.548 Thread 0x000001e5306f8000 nmethod 1273 0x000001e5161f6d90 code [0x000001e5161f6f20, 0x000001e5161f7270]
+Event: 3.557 Thread 0x000001e530707000 1275       3       com.badlogic.gdx.graphics.glutils.VertexArray::bind (347 bytes)
+Event: 3.557 Thread 0x000001e5306f8000 1276       3       com.badlogic.gdx.graphics.glutils.IndexArray::bind (1 bytes)
+Event: 3.557 Thread 0x000001e5306f8000 nmethod 1276 0x000001e5161f77d0 code [0x000001e5161f7920, 0x000001e5161f7a78]
+Event: 3.557 Thread 0x000001e5306f8000 1277       3       org.lwjgl.opengl.GL11::glDrawElements (6 bytes)
+Event: 3.557 Thread 0x000001e53070a800 1278       3       org.lwjgl.opengl.GL11C::glDrawElements (16 bytes)
+Event: 3.557 Thread 0x000001e5306f8000 nmethod 1277 0x000001e5161f7b10 code [0x000001e5161f7ca0, 0x000001e5161f81b0]
+Event: 3.558 Thread 0x000001e53070a800 nmethod 1278 0x000001e5161f8410 code [0x000001e5161f85a0, 0x000001e5161f8a50]
+Event: 3.558 Thread 0x000001e530707000 nmethod 1275 0x000001e5161f8c10 code [0x000001e5161f8fc0, 0x000001e5161faee0]
+Event: 3.566 Thread 0x000001e5306f8000 1280       3       com.badlogic.gdx.graphics.glutils.VertexArray::unbind (84 bytes)
+Event: 3.566 Thread 0x000001e530709800 1281       3       com.badlogic.gdx.graphics.glutils.IndexArray::unbind (1 bytes)
+Event: 3.566 Thread 0x000001e530709800 nmethod 1281 0x000001e5161fcad0 code [0x000001e5161fcc20, 0x000001e5161fcd78]
+Event: 3.566 Thread 0x000001e530709800 1282       3       com.badlogic.gdx.backends.lwjgl3.Lwjgl3GL20::glDepthMask (5 bytes)
+Event: 3.566 Thread 0x000001e53070a800 1283       3       org.lwjgl.opengl.GL11::glDepthMask (5 bytes)
+Event: 3.566 Thread 0x000001e530709800 nmethod 1282 0x000001e5161fce10 code [0x000001e5161fcf80, 0x000001e5161fd170]
+Event: 3.566 Thread 0x000001e53070a800 nmethod 1283 0x000001e5161fd250 code [0x000001e5161fd3c0, 0x000001e5161fd530]
+Event: 3.567 Thread 0x000001e5306f8000 nmethod 1280 0x000001e5161fd5d0 code [0x000001e5161fd820, 0x000001e5161fe3f0]
+Event: 3.575 Thread 0x000001e530709800 1285       3       com.badlogic.gdx.utils.Array::addAll (14 bytes)
+Event: 3.575 Thread 0x000001e530707000 1286       3       com.badlogic.gdx.utils.Array::addAll (66 bytes)
+Event: 3.575 Thread 0x000001e530709800 nmethod 1285 0x000001e5161ff0d0 code [0x000001e5161ff240, 0x000001e5161ff470]
+Event: 3.576 Thread 0x000001e530707000 nmethod 1286 0x000001e5161ff550 code [0x000001e5161ff720, 0x000001e5161ffd20]
+Event: 3.581 Thread 0x000001e530709800 1288       3       com.badlogic.gdx.graphics.g2d.GlyphLayout::calculateWidths (186 bytes)
+Event: 3.581 Thread 0x000001e53070a800 1287       1       com.badlogic.gdx.backends.lwjgl3.Lwjgl3Graphics::isContinuousRendering (5 bytes)
+Event: 3.581 Thread 0x000001e53070a800 nmethod 1287 0x000001e5161ffed0 code [0x000001e516200020, 0x000001e516200138]
+Event: 3.581 Thread 0x000001e530709800 nmethod 1288 0x000001e516200190 code [0x000001e516200360, 0x000001e516200af0]
+Event: 3.604 Thread 0x000001e5306f8000 1293       1       org.lwjgl.system.MemoryUtil::address (11 bytes)
+Event: 3.605 Thread 0x000001e53070a800 1294       3       com.badlogic.gdx.math.Matrix4::mul (695 bytes)
+Event: 3.605 Thread 0x000001e5306f8000 nmethod 1293 0x000001e5162016d0 code [0x000001e516201820, 0x000001e516201938]
+Event: 3.605 Thread 0x000001e5306f8000 1290       3       java.nio.DirectByteBuffer::asIntBuffer (151 bytes)
+Event: 3.605 Thread 0x000001e530707000 1291       3       java.nio.IntBuffer::<init> (12 bytes)
+Event: 3.605 Thread 0x000001e530709800 1292       3       java.nio.IntBuffer::<init> (22 bytes)
+Event: 3.605 Thread 0x000001e530707000 nmethod 1291 0x000001e516201990 code [0x000001e516201b00, 0x000001e516201d50]
+Event: 3.605 Thread 0x000001e530709800 nmethod 1292 0x000001e516201e50 code [0x000001e516201fc0, 0x000001e5162021b0]
+Event: 3.605 Thread 0x000001e53070a800 nmethod 1294 0x000001e516202250 code [0x000001e5162023e0, 0x000001e516202c38]
+Event: 3.605 Thread 0x000001e53070a800 1295       3       com.mygdx.game.GameEngineSection.Input.InputManager$KeyState::<init> (16 bytes)
+Event: 3.605 Thread 0x000001e5306f8000 nmethod 1290 0x000001e516203390 code [0x000001e516203560, 0x000001e516203e20]
+Event: 3.605 Thread 0x000001e5306f8000 1296       3       com.mygdx.game.GameEngineSection.Input.InputManager$InputState::<init> (25 bytes)
+Event: 3.605 Thread 0x000001e5306f8000 nmethod 1296 0x000001e516204310 code [0x000001e516204460, 0x000001e516204638]
+Event: 3.606 Thread 0x000001e530707000 1297       1       org.lwjgl.system.MemoryStack::getPointer (5 bytes)
+Event: 3.606 Thread 0x000001e530707000 nmethod 1297 0x000001e516204710 code [0x000001e516204860, 0x000001e516204978]
+Event: 3.606 Thread 0x000001e53070a800 nmethod 1295 0x000001e5162049d0 code [0x000001e516204b40, 0x000001e516204d98]
+Event: 3.622 Thread 0x000001e530709800 1298       1       java.util.HashMap::afterNodeInsertion (1 bytes)
+Event: 3.622 Thread 0x000001e530709800 nmethod 1298 0x000001e516204e90 code [0x000001e516204fe0, 0x000001e5162050f8]
+Event: 3.628 Thread 0x000001e530707000 1299       3       java.io.FileInputStream::read (9 bytes)
+Event: 3.628 Thread 0x000001e530707000 nmethod 1299 0x000001e5162069d0 code [0x000001e516206b40, 0x000001e516206cf0]
+Event: 3.630 Thread 0x000001e530709800 1300       3       com.badlogic.gdx.math.Vector2::<init> (5 bytes)
+Event: 3.630 Thread 0x000001e530709800 nmethod 1300 0x000001e516206fd0 code [0x000001e516207120, 0x000001e5162072d8]
+Event: 3.651 Thread 0x000001e530709800 1301       3       sun.misc.Unsafe::getAndAddLong (27 bytes)
+Event: 3.651 Thread 0x000001e530709800 nmethod 1301 0x000001e516208610 code [0x000001e516208780, 0x000001e516208998]
+Event: 3.651 Thread 0x000001e5306f8000 1303       3       sun.misc.VM::addFinalRefCount (24 bytes)
+Event: 3.651 Thread 0x000001e530707000 1304   !   3       java.lang.ref.Reference::tryHandlePending (115 bytes)
+Event: 3.651 Thread 0x000001e5306f8000 nmethod 1303 0x000001e516208e50 code [0x000001e516208fa0, 0x000001e516209158]
+Event: 3.651 Thread 0x000001e5306f8000 1306   !   3       java.lang.ref.ReferenceQueue::enqueue (119 bytes)
+Event: 3.651 Thread 0x000001e53070a800 1307       3       java.lang.ref.Reference::clear (6 bytes)
+Event: 3.651 Thread 0x000001e530709800 1311       3       java.lang.ref.ReferenceQueue::reallyPoll (65 bytes)
+Event: 3.651 Thread 0x000001e53070a800 nmethod 1307 0x000001e5162091d0 code [0x000001e516209320, 0x000001e516209498]
+Event: 3.651 Thread 0x000001e53070a800 1308       3       java.lang.ref.Finalizer::access$000 (4 bytes)
+Event: 3.651 Thread 0x000001e53070a800 nmethod 1308 0x000001e516209510 code [0x000001e516209660, 0x000001e5162097b8]
+Event: 3.651 Thread 0x000001e53070a800 1309       3       java.lang.ref.ReferenceQueue::remove (6 bytes)
+Event: 3.651 Thread 0x000001e5306f8000 nmethod 1306 0x000001e516209810 code [0x000001e5162099c0, 0x000001e51620a1b0]
+Event: 3.651 Thread 0x000001e5306f8000 1310   !   3       java.lang.ref.ReferenceQueue::remove (125 bytes)
+Event: 3.651 Thread 0x000001e530709800 nmethod 1311 0x000001e51620a3d0 code [0x000001e51620a540, 0x000001e51620a9d8]
+Event: 3.651 Thread 0x000001e530709800 1312       3       java.lang.ref.Finalizer::access$100 (6 bytes)
+Event: 3.651 Thread 0x000001e53070a800 nmethod 1309 0x000001e51620aad0 code [0x000001e51620ac40, 0x000001e51620ae70]
+Event: 3.651 Thread 0x000001e53070a800 1313   !   3       java.lang.ref.Finalizer::runFinalizer (62 bytes)
+Event: 3.651 Thread 0x000001e530707000 nmethod 1304 0x000001e51620af10 code [0x000001e51620b140, 0x000001e51620be50]
+Event: 3.651 Thread 0x000001e530707000 1314       3       java.lang.ref.Finalizer::hasBeenFinalized (14 bytes)
+Event: 3.651 Thread 0x000001e530709800 nmethod 1312 0x000001e51620c390 code [0x000001e51620c500, 0x000001e51620c690]
+Event: 3.651 Thread 0x000001e530709800 1315   !   3       java.lang.ref.Finalizer::remove (94 bytes)
+Event: 3.652 Thread 0x000001e530707000 nmethod 1314 0x000001e51620c750 code [0x000001e51620c8a0, 0x000001e51620ca58]
+Event: 3.652 Thread 0x000001e530707000 1316       3       java.lang.System$2::invokeFinalize (5 bytes)
+Event: 3.652 Thread 0x000001e53070a800 nmethod 1313 0x000001e51620cad0 code [0x000001e51620cca0, 0x000001e51620d560]
+Event: 3.652 Thread 0x000001e53070a800 1317       3       java.util.zip.ZipFile$ZipFileInputStream::finalize (5 bytes)
+Event: 3.652 Thread 0x000001e530707000 nmethod 1316 0x000001e51620d850 code [0x000001e51620d9c0, 0x000001e51620dbf0]
+Event: 3.652 Thread 0x000001e5306f8000 nmethod 1310 0x000001e51620dcd0 code [0x000001e51620dec0, 0x000001e51620e840]
+Event: 3.652 Thread 0x000001e5306f8000 1318       3       java.util.zip.ZipFile$ZipFileInflaterInputStream::finalize (5 bytes)
+Event: 3.652 Thread 0x000001e5306f8000 nmethod 1318 0x000001e51620ecd0 code [0x000001e51620ee40, 0x000001e51620eff0]
+Event: 3.652 Thread 0x000001e530709800 nmethod 1315 0x000001e51620f090 code [0x000001e51620f220, 0x000001e51620f738]
+Event: 3.652 Thread 0x000001e53070a800 nmethod 1317 0x000001e51620f8d0 code [0x000001e51620fa40, 0x000001e51620fbd0]
+Event: 3.654 Thread 0x000001e530707000 1321       3       com.sun.org.apache.xerces.internal.xni.QName::clear (21 bytes)
+Event: 3.654 Thread 0x000001e530707000 nmethod 1321 0x000001e51620fc50 code [0x000001e51620fda0, 0x000001e51620ff58]
+Event: 3.654 Thread 0x000001e530707000 1322       3       com.sun.org.apache.xerces.internal.xni.QName::<init> (9 bytes)
+Event: 3.654 Thread 0x000001e5306f8000 1320       3       java.lang.System::checkKey (34 bytes)
+Event: 3.654 Thread 0x000001e530709800 1319       1       com.sun.org.apache.xerces.internal.utils.XMLSecurityManager$Limit::systemProperty (5 bytes)
+Event: 3.654 Thread 0x000001e53070a800 1323       1       java.lang.Boolean::booleanValue (5 bytes)
+Event: 3.654 Thread 0x000001e530707000 nmethod 1322 0x000001e51620ffd0 code [0x000001e516210140, 0x000001e5162103b8]
+Event: 3.654 Thread 0x000001e53070a800 nmethod 1323 0x000001e516210490 code [0x000001e5162105e0, 0x000001e5162106f8]
+Event: 3.654 Thread 0x000001e530709800 nmethod 1319 0x000001e516210750 code [0x000001e5162108a0, 0x000001e5162109b8]
+Event: 3.654 Thread 0x000001e5306f8000 nmethod 1320 0x000001e516210a10 code [0x000001e516210bc0, 0x000001e516210fd0]
+Event: 3.654 Thread 0x000001e530707000 1324       3       com.sun.org.apache.xerces.internal.impl.XMLEntityScanner::checkEntityLimit (50 bytes)
+Event: 3.654 Thread 0x000001e530709800 1325       3       com.sun.org.apache.xerces.internal.util.XMLChar::isContent (35 bytes)
+Event: 3.654 Thread 0x000001e53070a800 1326       1       com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode::type (5 bytes)
+Event: 3.654 Thread 0x000001e53070a800 nmethod 1326 0x000001e516211150 code [0x000001e5162112a0, 0x000001e5162113b8]
+Event: 3.654 Thread 0x000001e530707000 nmethod 1324 0x000001e516211410 code [0x000001e5162115a0, 0x000001e516211a40]
+Event: 3.654 Thread 0x000001e530709800 nmethod 1325 0x000001e516211b90 code [0x000001e516211d00, 0x000001e516211f78]
+
+GC Heap History (2 events):
+Event: 3.646 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 75264K, used 64512K [0x000000076ca00000, 0x0000000771e00000, 0x00000007c0000000)
+  eden space 64512K, 100% used [0x000000076ca00000,0x0000000770900000,0x0000000770900000)
+  from space 10752K, 0% used [0x0000000771380000,0x0000000771380000,0x0000000771e00000)
+  to   space 10752K, 0% used [0x0000000770900000,0x0000000770900000,0x0000000771380000)
+ ParOldGen       total 172032K, used 0K [0x00000006c5e00000, 0x00000006d0600000, 0x000000076ca00000)
+  object space 172032K, 0% used [0x00000006c5e00000,0x00000006c5e00000,0x00000006d0600000)
+ Metaspace       used 13755K, capacity 13970K, committed 14336K, reserved 1062912K
+  class space    used 1291K, capacity 1410K, committed 1536K, reserved 1048576K
+Event: 3.650 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 75264K, used 6665K [0x000000076ca00000, 0x0000000771e00000, 0x00000007c0000000)
+  eden space 64512K, 0% used [0x000000076ca00000,0x000000076ca00000,0x0000000770900000)
+  from space 10752K, 61% used [0x0000000770900000,0x0000000770f82780,0x0000000771380000)
+  to   space 10752K, 0% used [0x0000000771380000,0x0000000771380000,0x0000000771e00000)
+ ParOldGen       total 172032K, used 48K [0x00000006c5e00000, 0x00000006d0600000, 0x000000076ca00000)
+  object space 172032K, 0% used [0x00000006c5e00000,0x00000006c5e0c010,0x00000006d0600000)
+ Metaspace       used 13755K, capacity 13970K, committed 14336K, reserved 1062912K
+  class space    used 1291K, capacity 1410K, committed 1536K, reserved 1048576K
+}
+
+Deoptimization events (14 events):
+Event: 0.371 Thread 0x000001e513f4a800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001e515e1e300 method=java.lang.String.indexOf([CII[CIII)I @ 123
+Event: 1.022 Thread 0x000001e513f4a800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001e515f8af54 method=java.io.WinNTFileSystem.normalize(Ljava/lang/String;)Ljava/lang/String; @ 128
+Event: 1.023 Thread 0x000001e513f4a800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001e515fff300 method=java.io.BufferedReader.readLine(Z)Ljava/lang/String; @ 153
+Event: 1.081 Thread 0x000001e513f4a800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001e516040594 method=javazoom.jl.decoder.BitReserve.hputbuf(I)V @ 110
+Event: 1.089 Thread 0x000001e513f4a800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001e516080a30 method=javazoom.jl.decoder.huffcodetab.huffman_decoder(Ljavazoom/jl/decoder/huffcodetab;[I[I[I[ILjavazoom/jl/decoder/BitReserve;)I @ 27
+Event: 1.936 Thread 0x000001e513f4a800 Uncommon trap: reason=array_check action=maybe_recompile pc=0x000001e51609b3e8 method=com.badlogic.gdx.utils.Array.add(Ljava/lang/Object;)V @ 46
+Event: 1.938 Thread 0x000001e513f4a800 Uncommon trap: reason=array_check action=maybe_recompile pc=0x000001e51609b3e8 method=com.badlogic.gdx.utils.Array.add(Ljava/lang/Object;)V @ 46
+Event: 1.942 Thread 0x000001e513f4a800 Uncommon trap: reason=array_check action=maybe_recompile pc=0x000001e51609b3e8 method=com.badlogic.gdx.utils.Array.add(Ljava/lang/Object;)V @ 46
+Event: 1.943 Thread 0x000001e513f4a800 Uncommon trap: reason=array_check action=maybe_recompile pc=0x000001e51609b3e8 method=com.badlogic.gdx.utils.Array.add(Ljava/lang/Object;)V @ 46
+Event: 1.961 Thread 0x000001e513f4a800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001e5160ac240 method=javazoom.jl.decoder.BitReserve.hgetbits(I)I @ 22
+Event: 1.977 Thread 0x000001e513f4a800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001e516104d88 method=javazoom.jl.decoder.BitReserve.hgetbits(I)I @ 22
+Event: 2.118 Thread 0x000001e513f4a800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001e516157c3c method=javazoom.jl.decoder.Bitstream.parse_frame()V @ 44
+Event: 2.192 Thread 0x000001e513f4a800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001e516090310 method=java.lang.Math.round(F)I @ 36
+Event: 2.760 Thread 0x000001e513f4a800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001e51609fa5c method=com.badlogic.gdx.graphics.g2d.BitmapFont$BitmapFontData.getGlyph(C)Lcom/badlogic/gdx/graphics/g2d/BitmapFont$Glyph; @ 12
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (166 events):
+Event: 0.016 Thread 0x000001e513f4a800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x000000076ca07cd8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\sh
+Event: 0.017 Thread 0x000001e513f4a800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x000000076ca07fc0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.c
+Event: 0.306 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076caab120) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.306 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076caab330) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.326 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076cf8d290) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.326 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076cf8d4a0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.340 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d216fa8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.340 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d2173a0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.358 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d474ff0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.358 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d475200) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.358 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d47b530) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.358 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d47b740) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.362 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d490a78) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.362 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d490c88) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.363 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d49ec88) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.363 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d49f080) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.364 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d4aa380) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.364 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d4aa590) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.365 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d4c5030) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.365 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d4c5240) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.365 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d4d6a78) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.365 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d4d6c88) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.378 Thread 0x000001e513f4a800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$static$0(Ljava/lang/String;)Ljava/lang/Boolean;> (0x000000076d536438) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\interpreter\linkResolver.cpp, 
+Event: 0.387 Thread 0x000001e513f4a800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x000000076d5ae218) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\methodHandles.cpp, line 1194]
+Event: 0.388 Thread 0x000001e513f4a800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x000000076d5bb618) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\methodHandles.cpp, line 1194]
+Event: 0.398 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d641760) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.398 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d641970) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.399 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d660200) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.399 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d660410) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.399 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d66ea70) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.399 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d66ec80) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.400 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d67aeb8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.400 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d67b0c8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.401 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6afb50) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.401 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6afd60) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.403 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6c32b0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.403 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6c34c0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.405 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6de7e8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.405 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6de9f8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.405 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6ec840) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.405 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6eca50) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.405 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6f7698) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.406 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6f78a8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.406 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d702550) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.406 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d702760) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.409 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7195e0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.409 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7197f0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.423 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d799288) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.423 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d799498) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.424 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7b3f38) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.424 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7b4148) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.424 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7bea50) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.424 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7bee48) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.425 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7cc230) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.425 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7cc440) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.425 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7d77b0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.425 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7d79c0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.425 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7da6f0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.425 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7da900) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.426 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7dd5a8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.426 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7dd7b8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.426 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7e0460) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.426 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7e06b8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.426 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7e3288) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.426 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7e3498) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.426 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7ead08) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.426 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7eaf18) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.427 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7fe0f8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.427 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7fe308) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.427 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d800be0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.427 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d800df0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.427 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d803640) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.427 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d803850) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.427 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8060a0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.427 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8062b0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.428 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d808a28) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.428 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d808c38) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.428 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d810920) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.428 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d810b30) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.428 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d813648) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.428 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d813858) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.428 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8162e8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.428 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8164f8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.428 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d818f88) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.428 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d819198) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.428 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d81bb50) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.428 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d81bd60) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.441 Thread 0x000001e513f4a800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076d8376d0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.441 Thread 0x000001e513f4a800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076d837f68) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.445 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d85ab60) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.445 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d85ad70) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d868060) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d868270) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d86ac88) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d86ae98) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d86d828) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d86da38) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8703c8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8705d8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d872e90) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8730a0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.448 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d891388) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.448 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d891598) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.450 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8bf968) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.450 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8bfb78) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.452 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8d0c48) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.452 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8d0e58) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.452 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8d3830) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.452 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8d3a40) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.452 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8d6390) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.452 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8d65a0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.452 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8d8ef0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.452 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8d9100) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.452 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8db978) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.452 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8dbb88) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.453 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8f1fa0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.453 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8f21b0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.455 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d920880) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.455 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d920a90) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.456 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d92b628) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.456 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d92b838) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.456 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9370a0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.456 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9372b0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.457 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d941f58) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.457 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d942168) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.457 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d959380) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.457 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d959590) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.458 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d965648) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.458 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d965858) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.458 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d970a68) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.458 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d970c78) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.462 Thread 0x000001e513f4a800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076d9a1bb0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.462 Thread 0x000001e513f4a800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076d9a22d0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.463 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9a8370) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.463 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9a8768) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.463 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9bf610) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.463 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9bfa08) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.464 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9d6760) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.464 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9d6b58) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.466 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9f1df8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.466 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9f2008) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.473 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076da571b0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.473 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076da575a8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.476 Thread 0x000001e513f4a800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076da80168) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.476 Thread 0x000001e513f4a800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076da80838) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.493 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076db28030) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.493 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076db28240) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.501 Thread 0x000001e513f4a800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076db4a458) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.501 Thread 0x000001e513f4a800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076db4ab50) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.504 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076db5da70) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.505 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076db5de68) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.505 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076db695f8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.505 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076db69808) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.554 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076dbbe510) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.554 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076dbbe720) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.659 Thread 0x000001e513f4a800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076dd5c978) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.659 Thread 0x000001e513f4a800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076dd5d0b0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.660 Thread 0x000001e513f4a800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076dd6f0e8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.660 Thread 0x000001e513f4a800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076dd6f6d8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.768 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076dee1440) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.768 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076dee1650) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.930 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076e8945c8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.930 Thread 0x000001e513f4a800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076e8949c0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.994 Thread 0x000001e513f4a800 Exception <a 'java/io/FileNotFoundException'> (0x000000076e9a5370) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 2.717 Thread 0x000001e513f4a800 Exception <a 'java/io/FileNotFoundException'> (0x000000077074bdb8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 2.760 Thread 0x000001e513f4a800 Implicit null exception at 0x000001e51609f97d to 0x000001e51609fa41
+
+Events (250 events):
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfcf30 mode 1
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfd260
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfd080 mode 1
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfd3f0
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfd210 mode 1
+Event: 3.625 loading class com/badlogic/gdx/physics/box2d/joints/RopeJoint
+Event: 3.625 loading class com/badlogic/gdx/physics/box2d/joints/RopeJoint done
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfd1e0
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfcf30 mode 1
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfd260
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfd080 mode 1
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfd3f0
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfd210 mode 1
+Event: 3.625 loading class com/badlogic/gdx/physics/box2d/joints/WeldJoint
+Event: 3.625 loading class com/badlogic/gdx/physics/box2d/joints/WeldJoint done
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfd1e0
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfcf30 mode 1
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfd260
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfd080 mode 1
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfd3f0
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfd210 mode 1
+Event: 3.625 loading class com/badlogic/gdx/physics/box2d/joints/WheelJoint
+Event: 3.625 loading class com/badlogic/gdx/physics/box2d/joints/WheelJoint done
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfd1e0
+Event: 3.625 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfcf30 mode 1
+Event: 3.626 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfd260
+Event: 3.626 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfd080 mode 1
+Event: 3.626 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfd3f0
+Event: 3.626 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfd210 mode 1
+Event: 3.629 loading class com/badlogic/gdx/physics/box2d/Contact
+Event: 3.629 loading class com/badlogic/gdx/physics/box2d/Contact done
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfdfd0
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdd20 mode 1
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfe050
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfde70 mode 1
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfe1e0
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfe000 mode 1
+Event: 3.629 loading class com/badlogic/gdx/physics/box2d/WorldManifold
+Event: 3.629 loading class com/badlogic/gdx/physics/box2d/WorldManifold done
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfdf50
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdca0 mode 1
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfdfd0
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfddf0 mode 1
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfe160
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdf80 mode 1
+Event: 3.629 loading class com/badlogic/gdx/physics/box2d/Manifold
+Event: 3.629 loading class com/badlogic/gdx/physics/box2d/Manifold done
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfdfd0
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdd20 mode 1
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfe050
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfde70 mode 1
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfe1e0
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfe000 mode 1
+Event: 3.629 loading class com/badlogic/gdx/physics/box2d/Manifold$ManifoldPoint
+Event: 3.629 loading class com/badlogic/gdx/physics/box2d/Manifold$ManifoldPoint done
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfdf60
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdcb0 mode 1
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfdfe0
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfde00 mode 1
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfe170
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdf90 mode 1
+Event: 3.629 loading class com/badlogic/gdx/physics/box2d/ContactImpulse
+Event: 3.629 loading class com/badlogic/gdx/physics/box2d/ContactImpulse done
+Event: 3.629 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfdfd0
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdd20 mode 1
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfe050
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfde70 mode 1
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfe1e0
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfe000 mode 1
+Event: 3.630 loading class com/mygdx/game/GameSection/Entity/CollisionManager
+Event: 3.630 loading class com/mygdx/game/GameSection/Entity/CollisionManager done
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfe050
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdda0 mode 1
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfe0d0
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdef0 mode 1
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfe260
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfe080 mode 1
+Event: 3.630 loading class com/mygdx/game/GameSection/Entity/Player
+Event: 3.630 loading class com/mygdx/game/GameSection/Entity/Player done
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfdf90
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdce0 mode 1
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfe010
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfde30 mode 1
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfe1a0
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdfc0 mode 1
+Event: 3.630 loading class com/mygdx/game/GameSection/Entity/Behavior
+Event: 3.630 loading class com/mygdx/game/GameSection/Entity/Behavior done
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfb8d0
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfb620 mode 1
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfb950
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfb770 mode 1
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfbae0
+Event: 3.630 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfb900 mode 1
+Event: 3.631 loading class com/mygdx/game/GameSection/Entity/InventoryManager
+Event: 3.631 loading class com/mygdx/game/GameSection/Entity/InventoryManager done
+Event: 3.631 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfdf00
+Event: 3.631 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdc50 mode 1
+Event: 3.631 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfdf80
+Event: 3.631 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdda0 mode 1
+Event: 3.631 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfe110
+Event: 3.631 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdf30 mode 1
+Event: 3.631 Executing VM operation: ForceSafepoint
+Event: 3.631 Executing VM operation: ForceSafepoint done
+Event: 3.643 Executing VM operation: ChangeBreakpoints
+Event: 3.643 Executing VM operation: ChangeBreakpoints done
+Event: 3.643 loading class com/mygdx/game/GameSection/Entity/EntityBuilder
+Event: 3.643 loading class com/mygdx/game/GameSection/Entity/EntityBuilder done
+Event: 3.643 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfdf00
+Event: 3.643 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdc50 mode 1
+Event: 3.643 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfdf80
+Event: 3.643 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdda0 mode 1
+Event: 3.643 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfe110
+Event: 3.643 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdf30 mode 1
+Event: 3.644 loading class com/badlogic/gdx/physics/box2d/Shape
+Event: 3.644 loading class com/badlogic/gdx/physics/box2d/Shape done
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfd090
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfcde0 mode 1
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfd110
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfcf30 mode 1
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfd2a0
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfd0c0 mode 1
+Event: 3.644 loading class com/badlogic/gdx/physics/box2d/PolygonShape
+Event: 3.644 loading class com/badlogic/gdx/physics/box2d/PolygonShape done
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfd090
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfcde0 mode 1
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfd110
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfcf30 mode 1
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfd2a0
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfd0c0 mode 1
+Event: 3.644 loading class com/badlogic/gdx/physics/box2d/CircleShape
+Event: 3.644 loading class com/badlogic/gdx/physics/box2d/CircleShape done
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfd090
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfcde0 mode 1
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfd110
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfcf30 mode 1
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfd2a0
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfd0c0 mode 1
+Event: 3.644 loading class com/mygdx/game/Utils/Helper
+Event: 3.644 loading class com/mygdx/game/Utils/Helper done
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfdc20
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfd970 mode 1
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfdca0
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdac0 mode 1
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfde30
+Event: 3.644 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdc50 mode 1
+Event: 3.646 loading class com/badlogic/gdx/physics/box2d/BodyDef
+Event: 3.646 loading class com/badlogic/gdx/physics/box2d/BodyDef done
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfde80
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdbd0 mode 1
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfdf00
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdd20 mode 1
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfe090
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdeb0 mode 1
+Event: 3.646 loading class com/badlogic/gdx/physics/box2d/BodyDef$BodyType
+Event: 3.646 loading class com/badlogic/gdx/physics/box2d/BodyDef$BodyType done
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfdcc0
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfda10 mode 1
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfdd40
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdb60 mode 1
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfded0
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdcf0 mode 1
+Event: 3.646 loading class com/badlogic/gdx/physics/box2d/Body
+Event: 3.646 loading class com/badlogic/gdx/physics/box2d/Body done
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfdd00
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfda50 mode 1
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfdd80
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdba0 mode 1
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfdf10
+Event: 3.646 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdd30 mode 1
+Event: 3.646 Executing VM operation: ParallelGCFailedAllocation
+Event: 3.650 Executing VM operation: ParallelGCFailedAllocation done
+Event: 3.651 loading class com/badlogic/gdx/physics/box2d/Transform
+Event: 3.651 loading class com/badlogic/gdx/physics/box2d/Transform done
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfdc80
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfd9d0 mode 1
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfdd00
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdb20 mode 1
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfde90
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdcb0 mode 1
+Event: 3.651 loading class com/badlogic/gdx/physics/box2d/MassData
+Event: 3.651 loading class com/badlogic/gdx/physics/box2d/MassData done
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfdc80
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfd9d0 mode 1
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfdd00
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdb20 mode 1
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfde90
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdcb0 mode 1
+Event: 3.651 loading class com/badlogic/gdx/physics/box2d/FixtureDef
+Event: 3.651 loading class com/badlogic/gdx/physics/box2d/FixtureDef done
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfde70
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdbc0 mode 1
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfdef0
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdd10 mode 1
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfe080
+Event: 3.651 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdea0 mode 1
+Event: 3.652 loading class com/badlogic/gdx/physics/box2d/Filter
+Event: 3.652 loading class com/badlogic/gdx/physics/box2d/Filter done
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfde10
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdb60 mode 1
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfde90
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdcb0 mode 1
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfe020
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfde40 mode 1
+Event: 3.652 loading class com/badlogic/gdx/physics/box2d/Fixture
+Event: 3.652 loading class com/badlogic/gdx/physics/box2d/Fixture done
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfdcf0
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfda40 mode 1
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfdd70
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdb90 mode 1
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfdf00
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdd20 mode 1
+Event: 3.652 loading class com/badlogic/gdx/physics/box2d/EdgeShape
+Event: 3.652 loading class com/badlogic/gdx/physics/box2d/EdgeShape done
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfcf40
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfcc90 mode 1
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfcfc0
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfcde0 mode 1
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfd150
+Event: 3.652 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfcf70 mode 1
+Event: 3.653 loading class com/badlogic/gdx/physics/box2d/ChainShape
+Event: 3.653 loading class com/badlogic/gdx/physics/box2d/ChainShape done
+Event: 3.653 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfcf40
+Event: 3.653 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfcc90 mode 1
+Event: 3.653 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfcfc0
+Event: 3.653 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfcde0 mode 1
+Event: 3.653 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfd150
+Event: 3.653 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfcf70 mode 1
+Event: 3.653 loading class com/mygdx/game/GameSection/Entity/Entity
+Event: 3.653 loading class com/mygdx/game/GameSection/Entity/Entity done
+Event: 3.653 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515f5e109 sp=0x00000045dabfdeb0
+Event: 3.653 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdc00 mode 1
+Event: 3.653 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a6d4 sp=0x00000045dabfdf30
+Event: 3.653 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdd50 mode 1
+Event: 3.653 Thread 0x000001e513f4a800 DEOPT PACKING pc=0x000001e515e3a464 sp=0x00000045dabfe0c0
+Event: 3.653 Thread 0x000001e513f4a800 DEOPT UNPACKING pc=0x000001e515b075d8 sp=0x00000045dabfdee0 mode 1
+Event: 4.322 Executing VM operation: EnableBiasedLocking
+Event: 4.322 Executing VM operation: EnableBiasedLocking done
+Event: 6.555 Executing VM operation: GetOrSetLocal
+Event: 6.555 Executing VM operation: GetOrSetLocal done
+Event: 6.556 Executing VM operation: GetOrSetLocal
+Event: 6.556 Executing VM operation: GetOrSetLocal done
+Event: 20.559 Executing VM operation: GetOrSetLocal
+Event: 20.559 Executing VM operation: GetOrSetLocal done
+Event: 43.323 Executing VM operation: GetOrSetLocal
+Event: 43.323 Executing VM operation: GetOrSetLocal done
+Event: 45.480 Executing VM operation: GetOrSetLocal
+Event: 45.480 Executing VM operation: GetOrSetLocal done
+Event: 57.660 Executing VM operation: GetOrSetLocal
+Event: 57.660 Executing VM operation: GetOrSetLocal done
+Event: 86.162 Thread 0x000001e530692800 Thread exited: 0x000001e530692800
+
+
+Dynamic libraries:
+0x00007ff6c6aa0000 - 0x00007ff6c6b3a000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\bin\java.exe
+0x00007ff964590000 - 0x00007ff9647a4000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff9642c0000 - 0x00007ff964383000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff961d40000 - 0x00007ff9620dc000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff962730000 - 0x00007ff9627de000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff962a30000 - 0x00007ff962ad7000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff962de0000 - 0x00007ff962e84000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff964180000 - 0x00007ff964295000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff9627f0000 - 0x00007ff96299d000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff962200000 - 0x00007ff962226000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff964460000 - 0x00007ff964489000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff9619d0000 - 0x00007ff961ae2000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff962160000 - 0x00007ff9621fa000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff961c20000 - 0x00007ff961d31000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff939890000 - 0x00007ff939b1e000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.608_none_a9444ca7c10bb01d\COMCTL32.dll
+0x00007ff964490000 - 0x00007ff9644c2000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff92ed80000 - 0x00007ff92ed95000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\vcruntime140.dll
+0x00007ff913130000 - 0x00007ff9131cb000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\msvcp140.dll
+0x00000000726a0000 - 0x0000000072f69000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\server\jvm.dll
+0x00007ff964390000 - 0x00007ff964398000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff95ca90000 - 0x00007ff95ca99000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff957fd0000 - 0x00007ff957fda000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff957d70000 - 0x00007ff957da4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff9644d0000 - 0x00007ff964541000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff960ac0000 - 0x00007ff960ad8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff92b410000 - 0x00007ff92b420000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\verify.dll
+0x00007ff91ecf0000 - 0x00007ff91ed1b000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\java.dll
+0x00007ff92c070000 - 0x00007ff92c0a6000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\jdwp.dll
+0x00007ff958250000 - 0x00007ff958259000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\npt.dll
+0x00007ff91e530000 - 0x00007ff91e548000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\zip.dll
+0x00007ff962fe0000 - 0x00007ff9637cf000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ff95f9c0000 - 0x00007ff960288000 	C:\WINDOWS\SYSTEM32\windows.storage.dll
+0x00007ff9623a0000 - 0x00007ff96272a000 	C:\WINDOWS\System32\combase.dll
+0x00007ff95f870000 - 0x00007ff95f9ae000 	C:\WINDOWS\SYSTEM32\wintypes.dll
+0x00007ff962ce0000 - 0x00007ff962dd1000 	C:\WINDOWS\System32\SHCORE.dll
+0x00007ff9643a0000 - 0x00007ff9643fe000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007ff961900000 - 0x00007ff961921000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x00007ff943ad0000 - 0x00007ff943ada000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\dt_socket.dll
+0x00007ff931c40000 - 0x00007ff931c57000 	C:\WINDOWS\system32\napinsp.dll
+0x00007ff9316c0000 - 0x00007ff9316db000 	C:\WINDOWS\system32\pnrpnsp.dll
+0x00007ff960f80000 - 0x00007ff960fe9000 	C:\WINDOWS\System32\mswsock.dll
+0x00007ff960500000 - 0x00007ff9605f3000 	C:\WINDOWS\SYSTEM32\DNSAPI.dll
+0x00007ff9604d0000 - 0x00007ff9604fd000 	C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+0x00007ff963e80000 - 0x00007ff963e89000 	C:\WINDOWS\System32\NSI.dll
+0x00007ff9208b0000 - 0x00007ff9208c1000 	C:\WINDOWS\System32\winrnr.dll
+0x00007ff957fe0000 - 0x00007ff957ff5000 	C:\WINDOWS\system32\wshbth.dll
+0x00007ff91e310000 - 0x00007ff91e331000 	C:\WINDOWS\system32\nlansp_c.dll
+0x00007ff956fb0000 - 0x00007ff957033000 	C:\WINDOWS\System32\fwpuclnt.dll
+0x00007ff951ea0000 - 0x00007ff951eaa000 	C:\Windows\System32\rasadhlp.dll
+0x00000000730f0000 - 0x0000000073119000 	C:\Users\aloys\AppData\Local\Temp\libgdxaloys\e787ab0a\gdx64.dll
+0x00007ff91d2c0000 - 0x00007ff91d2dc000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\net.dll
+0x00007ff91bc00000 - 0x00007ff91bc13000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\nio.dll
+0x00007ff92bff0000 - 0x00007ff92c065000 	C:\Users\aloys\AppData\Local\Temp\lwjglaloys\3.3.1-build-7\lwjgl.dll
+0x00007ff9125d0000 - 0x00007ff912829000 	C:\Users\aloys\AppData\Local\Temp\lwjglaloys\3.3.1-build-7\jemalloc.dll
+0x00007ff91e7a0000 - 0x00007ff91e801000 	C:\Users\aloys\AppData\Local\Temp\lwjglaloys\3.3.1-build-7\glfw.dll
+0x00007ff92bf40000 - 0x00007ff92bf86000 	C:\WINDOWS\SYSTEM32\dinput8.dll
+0x00007ff8eef00000 - 0x00007ff8eef11000 	C:\WINDOWS\SYSTEM32\xinput1_4.dll
+0x00007ff9616c0000 - 0x00007ff96170e000 	C:\WINDOWS\SYSTEM32\cfgmgr32.dll
+0x00007ff961680000 - 0x00007ff9616b3000 	C:\WINDOWS\SYSTEM32\DEVOBJ.dll
+0x00007ff95f030000 - 0x00007ff95f05b000 	C:\WINDOWS\SYSTEM32\dwmapi.dll
+0x00007ff94d990000 - 0x00007ff94db91000 	C:\WINDOWS\SYSTEM32\inputhost.dll
+0x00007ff95e100000 - 0x00007ff95e233000 	C:\WINDOWS\SYSTEM32\CoreMessaging.dll
+0x00007ff95e9a0000 - 0x00007ff95ea4b000 	C:\WINDOWS\system32\uxtheme.dll
+0x00007ff9620e0000 - 0x00007ff96215b000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff9611f0000 - 0x00007ff9611fc000 	C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL
+0x00007ff964050000 - 0x00007ff96416e000 	C:\WINDOWS\System32\MSCTF.dll
+0x00007ff912a50000 - 0x00007ff912be7000 	C:\Users\aloys\AppData\Local\Temp\lwjglaloys\3.3.1-build-7\OpenAL.dll
+0x00007ff962b40000 - 0x00007ff962cdc000 	C:\WINDOWS\System32\ole32.dll
+0x00007ff962e90000 - 0x00007ff962f40000 	C:\WINDOWS\System32\clbcatq.dll
+0x00007ff948380000 - 0x00007ff94841d000 	C:\WINDOWS\System32\MMDevApi.dll
+0x00007ff944da0000 - 0x00007ff944f85000 	C:\WINDOWS\SYSTEM32\AUDIOSES.DLL
+0x00007ff95f230000 - 0x00007ff95f245000 	C:\WINDOWS\SYSTEM32\resourcepolicyclient.dll
+0x00007ff9608e0000 - 0x00007ff96092d000 	C:\WINDOWS\SYSTEM32\powrprof.dll
+0x00007ff9608c0000 - 0x00007ff9608d3000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ff923170000 - 0x00007ff923270000 	C:\WINDOWS\SYSTEM32\opengl32.dll
+0x00007ff923100000 - 0x00007ff92312d000 	C:\WINDOWS\SYSTEM32\GLU32.dll
+0x00007ff95ecf0000 - 0x00007ff95ed26000 	C:\WINDOWS\SYSTEM32\dxcore.dll
+0x00007ff95ba20000 - 0x00007ff95ba69000 	C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll
+0x00007ff95aa90000 - 0x00007ff95abc5000 	C:\Windows\System32\AppXDeploymentClient.dll
+0x00007ff944510000 - 0x00007ff944606000 	C:\Windows\System32\Windows.ApplicationModel.dll
+0x00007ff9637d0000 - 0x00007ff9638a7000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ff95c820000 - 0x00007ff95c920000 	C:\WINDOWS\system32\propsys.dll
+0x00007ff923060000 - 0x00007ff923100000 	C:\Windows\System32\Windows.FileExplorer.Common.dll
+0x00007ff944620000 - 0x00007ff94470b000 	C:\Windows\System32\Windows.StateRepositoryPS.dll
+0x00007ff955760000 - 0x00007ff95579d000 	C:\WINDOWS\SYSTEM32\windows.staterepositoryclient.dll
+0x00007ff95e800000 - 0x00007ff95e897000 	C:\WINDOWS\SYSTEM32\apphelp.dll
+0x00007ff922da0000 - 0x00007ff922dba000 	C:\WINDOWS\system32\NetworkExplorer.dll
+0x00007ff95cbe0000 - 0x00007ff95cc06000 	C:\WINDOWS\system32\mssprxy.dll
+0x00007ff8b70b0000 - 0x00007ff8b8137000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_80ba20874d893d6e\igxelpicd64.dll
+0x00007ff95ed30000 - 0x00007ff95ee27000 	C:\WINDOWS\system32\dxgi.dll
+0x00007ff912490000 - 0x00007ff9125cc000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_80ba20874d893d6e\igdml64.dll
+0x00007ff94d4d0000 - 0x00007ff94d8d9000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_80ba20874d893d6e\igdgmm64.dll
+0x00007ff961bb0000 - 0x00007ff961c1b000 	C:\WINDOWS\System32\WINTRUST.dll
+0x00007ff962230000 - 0x00007ff962396000 	C:\WINDOWS\System32\CRYPT32.dll
+0x00007ff961660000 - 0x00007ff961672000 	C:\WINDOWS\SYSTEM32\MSASN1.dll
+0x00007ff948e40000 - 0x00007ff94d4c4000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_80ba20874d893d6e\igc64.dll
+0x00007ff922e90000 - 0x00007ff922eed000 	C:\Users\aloys\AppData\Local\Temp\lwjglaloys\3.3.1-build-7\lwjgl_opengl.dll
+0x00007ff952000000 - 0x00007ff95212d000 	C:\WINDOWS\SYSTEM32\textinputframework.dll
+0x00007ff955a60000 - 0x00007ff955dcc000 	C:\WINDOWS\SYSTEM32\CoreUIComponents.dll
+0x0000000073030000 - 0x00000000730e2000 	C:\Users\aloys\AppData\Local\Temp\libgdxaloys\ac200fef\gdx-freetype64.dll
+0x0000000072fd0000 - 0x000000007302a000 	C:\Users\aloys\AppData\Local\Temp\libgdxaloys\888fe1bc\gdx-box2d64.dll
+0x00007ff95f250000 - 0x00007ff95f47e000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:64810 
+java_command: com.mygdx.game.DesktopLauncher
+java_class_path (initial): C:\Users\aloys\AppData\Local\Temp\cp_70zierdccrcbr6pxl0lvjj8mv.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\bin
+PATH=D:\Applications\VMWare 17\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Applications\Android Studio\gradle-7.6-all\gradle-7.6\bin;D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\bin;D:\SIT\Year1Tri2\INF1009_ObjectOriented\gdx-setup.jar;D:\Code\Downloads\MSYS2_C_Prog\MSYS2\mingw64\bin;C:\Program Files\Git\cmd;C:\Users\aloys\AppData\Local\Microsoft\WindowsApps;D:\Applications\Microsoft VS Code\bin;C:\Users\aloys\.dotnet\tools;D:\Downloads\MSYS2_C_Prog\MSYS2\mingw64\bin;C:\Users\aloys\AppData\Local\GitHubDesktop\bin
+USERNAME=aloys
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 141 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 22621 (10.0.22621.1194)
+
+CPU:total 16 (initial active 16) (8 cores per cpu, 2 threads per core) family 6 model 141 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16389852k(4493572k free), swap 30545628k(9613028k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.352-b08) for windows-amd64 JRE (1.8.0_352-b08), built on Oct 16 2022 12:09:30 by "build" with MS VC++ 15.9 (VS2017)
+
+time: Thu Mar  9 19:13:19 2023
+timezone: Malay Peninsula Standard Time
+elapsed time: 86.187559 seconds (0d 0h 1m 26s)
+

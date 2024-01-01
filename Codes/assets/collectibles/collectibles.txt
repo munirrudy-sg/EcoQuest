@@ -1,0 +1,16 @@
+GLASS_broken_mug.png
+GLASS_glass_bottle.png
+GLASS_glass_jar.png
+METAL_large_can.png
+METAL_small_can.png
+METAL_soda_can.png
+METAL_spray_can.png
+PAPER_cardboard_box.png
+PAPER_newspaper.png
+PAPER_paper_bag.png
+PAPER_pizza_box.png
+PLASTIC_detergent.png
+PLASTIC_milk_bottle.png
+PLASTIC_plastic_bottle.png
+PLASTIC_stryofoam_cup.png
+PLASTIC_water_bottle.png

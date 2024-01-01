@@ -1,0 +1,161 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "MainMap.tmx",
+    "expandedProjectPaths": [
+        ".",
+        "Tilesets"
+    ],
+    "fileStates": {
+        "C:/Users/rudyh/OneDrive/Desktop/Interior_Tiled/curtains.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "C:/Users/rudyh/OneDrive/Desktop/Interior_Tiled/decorations.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "C:/Users/rudyh/OneDrive/Desktop/Interior_Tiled/doors.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/rudyh/OneDrive/Desktop/Interior_Tiled/rugs.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/rudyh/OneDrive/Desktop/Interior_Tiled/storage.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "C:/Users/rudyh/OneDrive/Desktop/Interior_Tiled/wallpapers.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/rudyh/OneDrive/Desktop/bathroom16x16.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/rudyh/OneDrive/Desktop/beds16x16.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/rudyh/OneDrive/Desktop/couches16x16.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/rudyh/OneDrive/Desktop/couches16x16_shadow.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/rudyh/OneDrive/Desktop/couchtables16x16.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "C:/Users/rudyh/OneDrive/Desktop/global.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "MainMap.tmx": {
+            "expandedGroupLayers": [
+                14
+            ],
+            "scale": 0.75,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 82,
+                "y": -859.3333333333333
+            }
+        },
+        "Tilesets/bathroom16x16.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesets/beds16x16.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesets/couches16x16.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesets/couches16x16_shadow.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesets/couchtables16x16.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesets/cozyfarm-buildings.tsx": {
+            "scaleInDock": 1
+        },
+        "Tilesets/cozyfarm-cropsNflowers.tsx": {
+            "scaleInDock": 3
+        },
+        "Tilesets/cozyfarm-tiles.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 3
+        },
+        "Tilesets/curtains.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesets/decorations.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesets/doors.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesets/global.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesets/modern-office-shadowless.tsx": {
+            "scaleInDock": 1
+        },
+        "Tilesets/modern-office.tsx": {
+            "scaleInDock": 1
+        },
+        "Tilesets/rugs.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesets/storage.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tilesets/wallpapers.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "C:/Users/rudyh/OneDrive/Desktop/github 28-2/inf1009-team11-2023/Codes/assets/map",
+    "last.externalTilesetPath": "C:/Users/rudyh/OneDrive/Desktop/github 28-2/inf1009-team11-2023/Codes/assets/map/Tilesets",
+    "last.imagePath": "C:/Users/rudyh/OneDrive/Desktop/github 28-2/inf1009-team11-2023/Codes/assets/map/PNGs/interior/basics",
+    "map.fixedSize": false,
+    "map.lastUsedExportFilter": "All Files (*)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "openFiles": [
+        "MainMap.tmx"
+    ],
+    "project": "GameMap.tiled-project",
+    "recentFiles": [
+        "MainMap.tmx",
+        "Tilesets/wallpapers.tsx",
+        "Tilesets/storage.tsx",
+        "Tilesets/rugs.tsx",
+        "Tilesets/global.tsx",
+        "Tilesets/doors.tsx",
+        "Tilesets/decorations.tsx",
+        "Tilesets/curtains.tsx",
+        "Tilesets/couchtables16x16.tsx",
+        "Tilesets/couches16x16_shadow.tsx",
+        "Tilesets/couches16x16.tsx",
+        "Tilesets/bathroom16x16.tsx"
+    ],
+    "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}

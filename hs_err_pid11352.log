@@ -1,0 +1,979 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8b84d7a32, pid=11352, tid=0x0000000000000ad0
+#
+# JRE version: OpenJDK Runtime Environment (8.0_352-b08) (build 1.8.0_352-b08)
+# Java VM: OpenJDK 64-Bit Server VM (25.352-b08 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [igxelpicd64.dll+0xa7a32]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugzilla.redhat.com/enter_bug.cgi
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001c17a8a9000):  JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_native, id=2768, stack(0x0000008563600000,0x0000008563700000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x0000000000035898
+
+Registers:
+RAX=0x000001c10d252238, RBX=0x000001c10d252130, RCX=0x0000000000000000, RDX=0x00000000fffffff0
+RSP=0x00000085636fe680, RBP=0x0000000000000000, RSI=0x000001c10d252700, RDI=0x000001c17e1095c0
+R8 =0x0000000000000014, R9 =0x0000000000000000, R10=0x0000000000000000, R11=0x0000000000000246
+R12=0x000001c17e56b500, R13=0x000001c10d251410, R14=0x0000000000000b00, R15=0x0000000000000016
+RIP=0x00007ff8b84d7a32, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x00000085636fe680)
+0x00000085636fe680:   000001c17e2a9020 0000000000000000
+0x00000085636fe690:   022d74b3022073b3 00007ff923932c94
+0x00000085636fe6a0:   022057b501671bb5 022083b5021266b5
+0x00000085636fe6b0:   020c75b7023bf1b6 023ee2b7024aa8b7
+0x00000085636fe6c0:   0000000000000015 0000000000000b09
+0x00000085636fe6d0:   0000b80200000000 000001c17e56b598
+0x00000085636fe6e0:   0000000000000000 0000000000000000
+0x00000085636fe6f0:   00000085636fe800 00007ff8b84bd5df
+0x00000085636fe700:   000001c17e2a9020 000001c17e1095c0
+0x00000085636fe710:   019d23c100ad4600 01dc0ac201f1bc00
+0x00000085636fe720:   0000008500005208 01fd8bc200000000
+0x00000085636fe730:   0000000000000000 00816dc300a33ec3
+0x00000085636fe740:   00c935c500f399c3 027663c501ea61c5
+0x00000085636fe750:   021933c60216eac5 0247e5c700d75dc7
+0x00000085636fe760:   0239b8c802595cc8 009738c9016e2cc9
+0x00000085636fe770:   022e07ca01c3ffc9 024d47cb00b723ca 
+
+Instructions: (pc=0x00007ff8b84d7a32)
+0x00007ff8b84d7a12:   83 2d 01 00 00 4a 8d 04 cd 21 00 00 00 49 03 c1
+0x00007ff8b84d7a22:   48 8d 04 c3 48 85 c0 0f 85 03 01 00 00 49 8b ca
+0x00007ff8b84d7a32:   48 3b 8d 98 58 03 00 0f 87 fe 97 94 00 48 8d 93
+0x00007ff8b84d7a42:   08 01 00 00 4c 39 93 48 06 00 00 0f 85 69 99 94 
+
+
+Register to memory mapping:
+
+RAX=0x000001c10d252238 is an unknown value
+RBX=0x000001c10d252130 is an unknown value
+RCX=0x0000000000000000 is an unknown value
+RDX=0x00000000fffffff0 is an unknown value
+RSP=0x00000085636fe680 is pointing into the stack for thread: 0x000001c17a8a9000
+RBP=0x0000000000000000 is an unknown value
+RSI=0x000001c10d252700 is an unknown value
+RDI=0x000001c17e1095c0 is an unknown value
+R8 =0x0000000000000014 is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000000246 is an unknown value
+R12=0x000001c17e56b500 is an unknown value
+R13=0x000001c10d251410 is an unknown value
+R14=0x0000000000000b00 is an unknown value
+R15=0x0000000000000016 is an unknown value
+
+
+Stack: [0x0000008563600000,0x0000008563700000],  sp=0x00000085636fe680,  free space=1017k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000001c10d7bd800 JavaThread "Thread-2" [_thread_blocked, id=9848, stack(0x0000008565300000,0x0000008565400000)]
+  0x000001c10d7c0800 JavaThread "LWJGL3 Timer" daemon [_thread_blocked, id=14036, stack(0x0000008565200000,0x0000008565300000)]
+  0x000001c17a8ce800 JavaThread "Service Thread" daemon [_thread_blocked, id=16184, stack(0x0000008564500000,0x0000008564600000)]
+  0x000001c17a8d3800 JavaThread "C1 CompilerThread11" daemon [_thread_blocked, id=1464, stack(0x0000008564400000,0x0000008564500000)]
+  0x000001c17a8d3000 JavaThread "C1 CompilerThread10" daemon [_thread_blocked, id=13128, stack(0x0000008564300000,0x0000008564400000)]
+  0x000001c17a8d1000 JavaThread "C1 CompilerThread9" daemon [_thread_blocked, id=15808, stack(0x0000008564200000,0x0000008564300000)]
+  0x000001c17a8ce000 JavaThread "C1 CompilerThread8" daemon [_thread_blocked, id=2500, stack(0x0000008564100000,0x0000008564200000)]
+  0x000001c17a8d0800 JavaThread "C2 CompilerThread7" daemon [_thread_blocked, id=5216, stack(0x0000008564000000,0x0000008564100000)]
+  0x000001c17a8cd000 JavaThread "C2 CompilerThread6" daemon [_thread_blocked, id=11640, stack(0x0000008563f00000,0x0000008564000000)]
+  0x000001c17a8d2000 JavaThread "C2 CompilerThread5" daemon [_thread_blocked, id=3256, stack(0x0000008563e00000,0x0000008563f00000)]
+  0x000001c17a8cf800 JavaThread "C2 CompilerThread4" daemon [_thread_blocked, id=16980, stack(0x0000008563d00000,0x0000008563e00000)]
+  0x000001c17a8c8800 JavaThread "C2 CompilerThread3" daemon [_thread_blocked, id=4912, stack(0x0000008563c00000,0x0000008563d00000)]
+  0x000001c17a8c1800 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=12464, stack(0x0000008563b00000,0x0000008563c00000)]
+  0x000001c17a8bf800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=12980, stack(0x0000008563a00000,0x0000008563b00000)]
+  0x000001c17a8b9800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=1904, stack(0x0000008563900000,0x0000008563a00000)]
+  0x000001c17a8ac000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=9308, stack(0x0000008563700000,0x0000008563800000)]
+=>0x000001c17a8a9000 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_native, id=2768, stack(0x0000008563600000,0x0000008563700000)]
+  0x000001c17a88d000 JavaThread "Attach Listener" daemon [_thread_blocked, id=6216, stack(0x0000008563500000,0x0000008563600000)]
+  0x000001c178ec7000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=16504, stack(0x0000008563400000,0x0000008563500000)]
+  0x000001c178eb5800 JavaThread "Finalizer" daemon [_thread_blocked, id=14812, stack(0x0000008563300000,0x0000008563400000)]
+  0x000001c178eac800 JavaThread "Reference Handler" daemon [_thread_blocked, id=10156, stack(0x0000008563200000,0x0000008563300000)]
+  0x000001c15e41d800 JavaThread "main" [_thread_blocked, id=7436, stack(0x0000008562300000,0x0000008562400000)]
+
+Other Threads:
+  0x000001c17a826800 VMThread [stack: 0x0000008563100000,0x0000008563200000] [id=5384]
+  0x000001c17a946000 WatcherThread [stack: 0x0000008564600000,0x0000008564700000] [id=10984]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000006c5e00000, size: 4002 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 75264K, used 17286K [0x000000076ca00000, 0x0000000771e00000, 0x00000007c0000000)
+  eden space 64512K, 16% used [0x000000076ca00000,0x000000076d498c10,0x0000000770900000)
+  from space 10752K, 59% used [0x0000000770900000,0x0000000770f48e90,0x0000000771380000)
+  to   space 10752K, 0% used [0x0000000771380000,0x0000000771380000,0x0000000771e00000)
+ ParOldGen       total 172032K, used 48K [0x00000006c5e00000, 0x00000006d0600000, 0x000000076ca00000)
+  object space 172032K, 0% used [0x00000006c5e00000,0x00000006c5e0c010,0x00000006d0600000)
+ Metaspace       used 14850K, capacity 15038K, committed 15360K, reserved 1062912K
+  class space    used 1415K, capacity 1508K, committed 1536K, reserved 1048576K
+
+Card table byte_map: [0x000001c16f170000,0x000001c16f950000] byte_map_base: 0x000001c16bb41000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005a13a0e0
+ Begin Bits: [0x000001c16fe90000, 0x000001c173d18000)
+ End Bits:   [0x000001c173d18000, 0x000001c177ba0000)
+
+Polling page: 0x000001c15fd80000
+
+CodeCache: size=245760Kb used=7783Kb max_used=7783Kb free=237976Kb
+ bounds [0x000001c15fdb0000, 0x000001c160550000, 0x000001c16edb0000]
+ total_blobs=2420 nmethods=1419 adapters=918
+ compilation: enabled
+
+Compilation events (250 events):
+Event: 2.739 Thread 0x000001c17a8ce000 1306       3       java.util.TreeMap::rotateRight (96 bytes)
+Event: 2.739 Thread 0x000001c17a8ce000 nmethod 1306 0x000001c160501750 code [0x000001c1605018c0, 0x000001c160501c58]
+Event: 2.741 Thread 0x000001c17a8d3000 1307       3       java.util.HashMap::afterNodeAccess (1 bytes)
+Event: 2.741 Thread 0x000001c17a8d3000 nmethod 1307 0x000001c1604fe2d0 code [0x000001c1604fe420, 0x000001c1604fe578]
+Event: 2.742 Thread 0x000001c17a8d1000 1308       3       com.sun.org.apache.xml.internal.serializer.Encodings::toUpperCaseFast (83 bytes)
+Event: 2.742 Thread 0x000001c17a8d3800 1309       3       com.sun.org.apache.xml.internal.serializer.Encodings::access$000 (5 bytes)
+Event: 2.742 Thread 0x000001c17a8d3800 nmethod 1309 0x000001c160501d90 code [0x000001c160501f00, 0x000001c160502070]
+Event: 2.742 Thread 0x000001c17a8ce000 1310       3       java.util.HashMap$HashIterator::hasNext (13 bytes)
+Event: 2.742 Thread 0x000001c17a8ce000 nmethod 1310 0x000001c160502110 code [0x000001c160502260, 0x000001c160502418]
+Event: 2.742 Thread 0x000001c17a8d1000 nmethod 1308 0x000001c160502490 code [0x000001c160502680, 0x000001c160503120]
+Event: 2.746 Thread 0x000001c17a8d3000 1312       3       java.util.Hashtable$Enumerator::hasMoreElements (53 bytes)
+Event: 2.746 Thread 0x000001c17a8d3000 nmethod 1312 0x000001c160503b50 code [0x000001c160503cc0, 0x000001c160503fb8]
+Event: 2.752 Thread 0x000001c17a8cf800 nmethod 1302 0x000001c160508190 code [0x000001c160508360, 0x000001c160509798]
+Event: 2.761 Thread 0x000001c17a8d3800 1313       3       java.util.regex.Matcher::end (22 bytes)
+Event: 2.761 Thread 0x000001c17a8d3800 nmethod 1313 0x000001c160507c90 code [0x000001c160507e00, 0x000001c160508070]
+Event: 2.764 Thread 0x000001c17a8cd000 nmethod 1301 0x000001c16050ead0 code [0x000001c16050ee60, 0x000001c160511a78]
+Event: 7.746 Thread 0x000001c17a8ce000 1314       3       java.util.regex.Pattern$BitClass::isSatisfiedBy (22 bytes)
+Event: 7.747 Thread 0x000001c17a8d1000 1315       3       com.badlogic.gdx.utils.Array::peek (29 bytes)
+Event: 7.747 Thread 0x000001c17a8ce000 nmethod 1314 0x000001c160507810 code [0x000001c160507980, 0x000001c160507b98]
+Event: 7.747 Thread 0x000001c17a8d1000 nmethod 1315 0x000001c160507250 code [0x000001c1605073e0, 0x000001c160507690]
+Event: 7.747 Thread 0x000001c17a8d3000 1318       3       java.util.Hashtable$Enumerator::nextElement (111 bytes)
+Event: 7.747 Thread 0x000001c17a8d3800 1316       3       com.sun.org.apache.xerces.internal.utils.XMLSecurityManager$NameMap::getOldName (18 bytes)
+Event: 7.747 Thread 0x000001c17a8d1000 1317       1       jdk.xml.internal.XMLSecurityManager$Limit::systemProperty (5 bytes)
+Event: 7.748 Thread 0x000001c17a8d3000 nmethod 1318 0x000001c1605069d0 code [0x000001c160506b60, 0x000001c160507030]
+Event: 7.748 Thread 0x000001c17a8d1000 nmethod 1317 0x000001c160506710 code [0x000001c160506860, 0x000001c160506978]
+Event: 7.748 Thread 0x000001c17a8d3800 nmethod 1316 0x000001c160506250 code [0x000001c1605063c0, 0x000001c160506650]
+Event: 12.749 Thread 0x000001c17a8d1000 1319       3       java.util.Arrays::asList (9 bytes)
+Event: 12.749 Thread 0x000001c17a8d3000 1320       3       java.util.Arrays$ArrayList::<init> (16 bytes)
+Event: 12.749 Thread 0x000001c17a8ce000 1321       3       java.util.AbstractList$Itr::<init> (6 bytes)
+Event: 12.749 Thread 0x000001c17a8ce000 nmethod 1321 0x000001c160505d50 code [0x000001c160505ec0, 0x000001c160506118]
+Event: 12.749 Thread 0x000001c17a8ce000 1322       3       java.util.AbstractList$Itr::<init> (31 bytes)
+Event: 12.749 Thread 0x000001c17a8ce000 nmethod 1322 0x000001c160505910 code [0x000001c160505a80, 0x000001c160505c78]
+Event: 12.749 Thread 0x000001c17a8d1000 nmethod 1319 0x000001c160505010 code [0x000001c1605051c0, 0x000001c160505650]
+Event: 12.749 Thread 0x000001c17a8d3000 nmethod 1320 0x000001c160504890 code [0x000001c160504a20, 0x000001c160504e10]
+Event: 17.751 Thread 0x000001c17a8d1000 1324       1       java.util.Arrays$ArrayList::size (6 bytes)
+Event: 17.751 Thread 0x000001c17a8d3800 1323       3       java.util.AbstractList::iterator (10 bytes)
+Event: 17.751 Thread 0x000001c17a8d1000 nmethod 1324 0x000001c160504590 code [0x000001c1605046e0, 0x000001c1605047f8]
+Event: 17.751 Thread 0x000001c17a8d3800 nmethod 1323 0x000001c16050e510 code [0x000001c16050e680, 0x000001c16050e978]
+Event: 22.752 Thread 0x000001c17a8d3000 1325       3       com.sun.org.apache.xerces.internal.xni.XMLString::<init> (5 bytes)
+Event: 22.752 Thread 0x000001c17a8d3000 nmethod 1325 0x000001c160504110 code [0x000001c160504260, 0x000001c160504418]
+Event: 27.753 Thread 0x000001c17a8d3000 1326       3       com.sun.org.apache.xml.internal.serializer.CharInfo::isTextASCIIClean (7 bytes)
+Event: 27.754 Thread 0x000001c17a8d3000 nmethod 1326 0x000001c16050e150 code [0x000001c16050e2a0, 0x000001c16050e438]
+Event: 32.755 Thread 0x000001c17a8ce000 1327       1       java.util.Arrays$ArrayList::get (7 bytes)
+Event: 32.755 Thread 0x000001c17a8d1000 1332       3       com.sun.org.apache.xerces.internal.impl.XMLScanner::setFeature (32 bytes)
+Event: 32.755 Thread 0x000001c17a8ce000 nmethod 1327 0x000001c16050dc10 code [0x000001c16050dd60, 0x000001c16050de98]
+Event: 32.755 Thread 0x000001c17a8d3800 1328       3       com.sun.org.apache.xerces.internal.utils.SecuritySupport::getSystemProperty (15 bytes)
+Event: 32.755 Thread 0x000001c17a8ce000 1329       3       com.sun.org.apache.xerces.internal.utils.SecuritySupport$4::<init> (10 bytes)
+Event: 32.755 Thread 0x000001c17a8d1000 nmethod 1332 0x000001c16050d650 code [0x000001c16050d7c0, 0x000001c16050db60]
+Event: 32.755 Thread 0x000001c17a8ce000 nmethod 1329 0x000001c16050d290 code [0x000001c16050d3e0, 0x000001c16050d5b8]
+Event: 32.755 Thread 0x000001c17a8ce000 1330       3       com.sun.org.apache.xerces.internal.utils.SecuritySupport$4::run (8 bytes)
+Event: 32.755 Thread 0x000001c17a8d3800 nmethod 1328 0x000001c16050cc50 code [0x000001c16050cde0, 0x000001c16050d170]
+Event: 32.755 Thread 0x000001c17a8d3800 1331       3       java.util.Arrays::copyOf (13 bytes)
+Event: 32.755 Thread 0x000001c17a8d1000 1333       3       jdk.xml.internal.XMLSecurityManager$NameMap::getOldName (18 bytes)
+Event: 32.755 Thread 0x000001c17a8d3800 nmethod 1331 0x000001c16050c7d0 code [0x000001c16050c940, 0x000001c16050cb70]
+Event: 32.755 Thread 0x000001c17a8ce000 nmethod 1330 0x000001c16050c090 code [0x000001c16050c220, 0x000001c16050c5f0]
+Event: 32.756 Thread 0x000001c17a8d1000 nmethod 1333 0x000001c16050bbd0 code [0x000001c16050bd40, 0x000001c16050bfd0]
+Event: 37.757 Thread 0x000001c17a8d3000 1334   !   3       com.sun.org.apache.xerces.internal.utils.XMLSecurityManager::getSystemProperty (126 bytes)
+Event: 37.757 Thread 0x000001c17a8ce000 1335       1       java.util.Hashtable::access$500 (5 bytes)
+Event: 37.757 Thread 0x000001c17a8ce000 nmethod 1335 0x000001c16050b910 code [0x000001c16050ba60, 0x000001c16050bb58]
+Event: 37.757 Thread 0x000001c17a8d3000 nmethod 1334 0x000001c160514b10 code [0x000001c160514de0, 0x000001c160516380]
+Event: 47.759 Thread 0x000001c17a8ce000 1336       3       java.lang.Float::isNaN (12 bytes)
+Event: 47.760 Thread 0x000001c17a8ce000 nmethod 1336 0x000001c16050b590 code [0x000001c16050b6e0, 0x000001c16050b898]
+Event: 52.760 Thread 0x000001c17a8d3000 1337       3       com.badlogic.gdx.utils.StringBuilder::charAt (28 bytes)
+Event: 52.760 Thread 0x000001c17a8d3000 nmethod 1337 0x000001c16050af90 code [0x000001c16050b120, 0x000001c16050b410]
+Event: 52.761 Thread 0x000001c17a8ce000 1338       1       com.sun.org.apache.xerces.internal.dom.ElementImpl::getNodeType (2 bytes)
+Event: 52.761 Thread 0x000001c17a8ce000 nmethod 1338 0x000001c16050a890 code [0x000001c16050a9e0, 0x000001c16050aaf8]
+Event: 57.761 Thread 0x000001c17a8d1000 1340       3       java.util.regex.Pattern$CharProperty$1::isSatisfiedBy (17 bytes)
+Event: 57.761 Thread 0x000001c17a8ce000 1341       3       java.util.regex.Pattern$7::isSatisfiedBy (28 bytes)
+Event: 57.761 Thread 0x000001c17a8d1000 nmethod 1340 0x000001c1605170d0 code [0x000001c160517240, 0x000001c1605174d0]
+Event: 57.762 Thread 0x000001c17a8ce000 nmethod 1341 0x000001c160517590 code [0x000001c160517720, 0x000001c160517ac0]
+Event: 57.762 Thread 0x000001c17a8ce000 1343       3       com.sun.org.apache.xerces.internal.utils.XMLSecurityManager$NameMap::values (10 bytes)
+Event: 57.762 Thread 0x000001c17a8d1000 1342       3       java.nio.charset.Charset::lookup (44 bytes)
+Event: 57.762 Thread 0x000001c17a8ce000 nmethod 1343 0x000001c160517bd0 code [0x000001c160517d40, 0x000001c160518030]
+Event: 57.762 Thread 0x000001c17a8d1000 nmethod 1342 0x000001c1605180d0 code [0x000001c160518280, 0x000001c160518790]
+Event: 57.762 Thread 0x000001c17a8ce000 1344       3       com.sun.org.apache.xerces.internal.util.PropertyState::isExceptional (8 bytes)
+Event: 57.762 Thread 0x000001c17a8ce000 nmethod 1344 0x000001c160518990 code [0x000001c160518ae0, 0x000001c160518cd8]
+Event: 57.762 Thread 0x000001c17a8ce000 1346   !   3       sun.misc.URLClassPath::check (123 bytes)
+Event: 57.763 Thread 0x000001c17a8d1000 1345       3       java.lang.Boolean::valueOf (14 bytes)
+Event: 57.763 Thread 0x000001c17a8d1000 nmethod 1345 0x000001c160518d90 code [0x000001c160518ee0, 0x000001c160519078]
+Event: 57.763 Thread 0x000001c17a8ce000 nmethod 1346 0x000001c160519110 code [0x000001c1605193a0, 0x000001c16051a8f0]
+Event: 62.763 Thread 0x000001c17a8ce000 1347       3       sun.reflect.ClassFileAssembler::emitByte (11 bytes)
+Event: 62.764 Thread 0x000001c17a8ce000 nmethod 1347 0x000001c16051b5d0 code [0x000001c16051b740, 0x000001c16051b930]
+Event: 62.764 Thread 0x000001c17a8ce000 1348       3       sun.reflect.ByteVectorImpl::add (38 bytes)
+Event: 62.764 Thread 0x000001c17a8ce000 nmethod 1348 0x000001c16051ba50 code [0x000001c16051bbc0, 0x000001c16051bdf0]
+Event: 62.764 Thread 0x000001c17a8d3000 1349   !   3       com.sun.org.apache.xerces.internal.utils.SecuritySupport::readJAXPProperty (171 bytes)
+Event: 62.764 Thread 0x000001c17a8ce000 1350       3       jdk.xml.internal.SecuritySupport::getSystemProperty (15 bytes)
+Event: 62.765 Thread 0x000001c17a8d1000 1351       3       jdk.xml.internal.SecuritySupport$1::<init> (10 bytes)
+Event: 62.765 Thread 0x000001c17a8ce000 nmethod 1350 0x000001c16051bf10 code [0x000001c16051c0a0, 0x000001c16051c430]
+Event: 62.765 Thread 0x000001c17a8d3800 1352       3       jdk.xml.internal.SecuritySupport$1::run (5 bytes)
+Event: 62.765 Thread 0x000001c17a8ce000 1353       3       jdk.xml.internal.SecuritySupport$1::run (8 bytes)
+Event: 62.765 Thread 0x000001c17a8d1000 nmethod 1351 0x000001c16051c550 code [0x000001c16051c6a0, 0x000001c16051c878]
+Event: 62.765 Thread 0x000001c17a8d1000 1354   !   3       jdk.xml.internal.SecuritySupport::readJAXPProperty (171 bytes)
+Event: 62.765 Thread 0x000001c17a8d3800 nmethod 1352 0x000001c16051c910 code [0x000001c16051cac0, 0x000001c16051cf70]
+Event: 62.765 Thread 0x000001c17a8d3800 1355       3       com.sun.org.apache.xml.internal.serializer.WriterToUTF8Buffered::write (296 bytes)
+Event: 62.765 Thread 0x000001c17a8ce000 nmethod 1353 0x000001c16051d1d0 code [0x000001c16051d360, 0x000001c16051d730]
+Event: 62.765 Thread 0x000001c17a8d3800 nmethod 1355 0x000001c16051d910 code [0x000001c16051dac0, 0x000001c16051e190]
+Event: 62.766 Thread 0x000001c17a8d3000 nmethod 1349 0x000001c16051e4d0 code [0x000001c16051e8a0, 0x000001c160520a30]
+Event: 62.766 Thread 0x000001c17a8d1000 nmethod 1354 0x000001c160521e90 code [0x000001c160522260, 0x000001c160524410]
+Event: 67.766 Thread 0x000001c17a8ce000 1356       3       java.util.Vector::<init> (7 bytes)
+Event: 67.766 Thread 0x000001c17a8d3800 1357       3       java.util.Vector::<init> (7 bytes)
+Event: 67.766 Thread 0x000001c17a8d3000 1358       3       java.util.Vector::<init> (49 bytes)
+Event: 67.766 Thread 0x000001c17a8ce000 nmethod 1356 0x000001c160525890 code [0x000001c160525a00, 0x000001c160525c10]
+Event: 67.766 Thread 0x000001c17a8cf800 1359       4       sun.misc.URLClassPath$JarLoader::findResource (18 bytes)
+Event: 67.766 Thread 0x000001c17a8d3800 nmethod 1357 0x000001c160525cd0 code [0x000001c160525e40, 0x000001c160525ff0]
+Event: 67.766 Thread 0x000001c17a8d3000 nmethod 1358 0x000001c160526090 code [0x000001c160526280, 0x000001c160526ca0]
+Event: 67.767 Thread 0x000001c17a8cf800 nmethod 1359 0x000001c160529e50 code [0x000001c160529fa0, 0x000001c16052a068]
+Event: 72.767 Thread 0x000001c17a8d3800 1360       3       java.lang.String::contains (20 bytes)
+Event: 72.767 Thread 0x000001c17a8d3000 1361       3       com.badlogic.gdx.utils.StringBuilder::replace (59 bytes)
+Event: 72.767 Thread 0x000001c17a8d3800 nmethod 1360 0x000001c1605295d0 code [0x000001c160529760, 0x000001c160529c20]
+Event: 72.767 Thread 0x000001c17a8d3000 nmethod 1361 0x000001c160528d10 code [0x000001c160528ea0, 0x000001c160529370]
+Event: 72.768 Thread 0x000001c17a8ce000 1362       3       com.sun.org.apache.xerces.internal.util.XMLStringBuffer::<init> (12 bytes)
+Event: 72.768 Thread 0x000001c17a8ce000 nmethod 1362 0x000001c1605287d0 code [0x000001c160528940, 0x000001c160528bf8]
+Event: 72.768 Thread 0x000001c17a8ce000 1363       3       com.sun.org.apache.xerces.internal.parsers.XML11Configuration::checkFeature (268 bytes)
+Event: 72.768 Thread 0x000001c17a8d3000 1364       3       com.sun.org.apache.xerces.internal.dom.NodeImpl::isOwned (16 bytes)
+Event: 72.768 Thread 0x000001c17a8d3000 nmethod 1364 0x000001c160528450 code [0x000001c1605285a0, 0x000001c160528758]
+Event: 72.768 Thread 0x000001c17a8d3000 1365       3       sun.reflect.ClassFileAssembler::emitShort (24 bytes)
+Event: 72.768 Thread 0x000001c17a8d3800 1366       3       sun.reflect.ClassFileAssembler::cpi (22 bytes)
+Event: 72.768 Thread 0x000001c17a8d3000 nmethod 1365 0x000001c160527d50 code [0x000001c160527ee0, 0x000001c160528240]
+Event: 72.768 Thread 0x000001c17a8d3800 nmethod 1366 0x000001c160527890 code [0x000001c160527a00, 0x000001c160527c70]
+Event: 72.768 Thread 0x000001c17a8ce000 nmethod 1363 0x000001c16052a150 code [0x000001c16052a500, 0x000001c16052cdf0]
+Event: 72.768 Thread 0x000001c17a8ce000 1367       3       com.sun.org.apache.xml.internal.serializer.WriterToUTF8Buffered::write (523 bytes)
+Event: 72.769 Thread 0x000001c17a8ce000 nmethod 1367 0x000001c16052ddd0 code [0x000001c16052e000, 0x000001c16052f000]
+Event: 77.769 Thread 0x000001c17a8ce000 1368       3       java.util.ArrayList::<init> (12 bytes)
+Event: 77.769 Thread 0x000001c17a8ce000 nmethod 1368 0x000001c160527350 code [0x000001c1605274c0, 0x000001c160527758]
+Event: 77.769 Thread 0x000001c17a8d1000 1371   !   3       com.sun.org.apache.xerces.internal.parsers.XML11Configuration::setFeature (155 bytes)
+Event: 77.769 Thread 0x000001c17a8ce000 1369       3       com.sun.org.apache.xerces.internal.util.XMLStringBuffer::<init> (7 bytes)
+Event: 77.769 Thread 0x000001c17a8ce000 nmethod 1369 0x000001c160073ed0 code [0x000001c160074040, 0x000001c160074358]
+Event: 77.769 Thread 0x000001c17a8d3800 1375       3       com.sun.org.apache.xerces.internal.util.FeatureState::isExceptional (8 bytes)
+Event: 77.769 Thread 0x000001c17a8ce000 1372       3       com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl::setFeature (75 bytes)
+Event: 77.769 Thread 0x000001c17a8d3000 1370       3       com.sun.org.apache.xerces.internal.parsers.XIncludeAwareParserConfiguration::setFeature (27 bytes)
+Event: 77.769 Thread 0x000001c17a8d3800 nmethod 1375 0x000001c160058890 code [0x000001c1600589e0, 0x000001c160058bd8]
+Event: 77.769 Thread 0x000001c17a8d3000 nmethod 1370 0x000001c160091d10 code [0x000001c160091e80, 0x000001c160092160]
+Event: 77.769 Thread 0x000001c17a8d3000 1373       3       com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl::setFeature (40 bytes)
+Event: 77.769 Thread 0x000001c17a8d3800 1374       3       com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDProcessor::setFeature (1 bytes)
+Event: 77.769 Thread 0x000001c17a8ce000 nmethod 1372 0x000001c16052fc50 code [0x000001c16052fe40, 0x000001c160530a40]
+Event: 77.769 Thread 0x000001c17a8d3800 nmethod 1374 0x000001c16005be10 code [0x000001c16005bf60, 0x000001c16005c0b8]
+Event: 77.769 Thread 0x000001c17a8d3800 1376       1       java.net.URLClassLoader::access$200 (5 bytes)
+Event: 77.770 Thread 0x000001c17a8d3000 nmethod 1373 0x000001c160064ed0 code [0x000001c1600650a0, 0x000001c160065930]
+Event: 77.770 Thread 0x000001c17a8d3800 nmethod 1376 0x000001c160066010 code [0x000001c160066160, 0x000001c160066258]
+Event: 77.770 Thread 0x000001c17a8d1000 nmethod 1371 0x000001c160530f10 code [0x000001c160531200, 0x000001c160532920]
+Event: 82.770 Thread 0x000001c17a8d1000 1377       3       com.sun.org.apache.xerces.internal.dom.NodeImpl::needsSyncData (15 bytes)
+Event: 82.770 Thread 0x000001c17a8cd000 1379       4       sun.misc.URLClassPath::access$100 (7 bytes)
+Event: 82.770 Thread 0x000001c17a8d1000 nmethod 1377 0x000001c160064b50 code [0x000001c160064ca0, 0x000001c160064e58]
+Event: 82.770 Thread 0x000001c17a8d1000 1378       1       com.sun.org.apache.xerces.internal.dom.ParentNode::ownerDocument (5 bytes)
+Event: 82.770 Thread 0x000001c17a8d1000 nmethod 1378 0x000001c160059cd0 code [0x000001c160059e20, 0x000001c160059f38]
+Event: 82.770 Thread 0x000001c17a8cd000 nmethod 1379 0x000001c160059a10 code [0x000001c160059b60, 0x000001c160059c08]
+Event: 82.771 Thread 0x000001c17a8ce000 1380   !   3       jdk.xml.internal.XMLSecurityManager::getSystemProperty (126 bytes)
+Event: 82.771 Thread 0x000001c17a8d1000 1381  s    3       java.util.Properties::setProperty (7 bytes)
+Event: 82.771 Thread 0x000001c17a8d1000 nmethod 1381 0x000001c16005b3d0 code [0x000001c16005b540, 0x000001c16005b8d0]
+Event: 82.771 Thread 0x000001c17a8d3000 1382       3       java.util.Stack::push (7 bytes)
+Event: 82.771 Thread 0x000001c17a8d3000 nmethod 1382 0x000001c160068390 code [0x000001c160068500, 0x000001c160068730]
+Event: 82.772 Thread 0x000001c17a8ce000 nmethod 1380 0x000001c160533f90 code [0x000001c160534260, 0x000001c160535800]
+Event: 87.772 Thread 0x000001c17a8ce000 1383       3       java.util.ArrayList::ensureCapacityInternal (13 bytes)
+Event: 87.772 Thread 0x000001c17a8d3000 1384       3       java.util.ArrayList::ensureExplicitCapacity (26 bytes)
+Event: 87.772 Thread 0x000001c17a8ce000 nmethod 1383 0x000001c160533890 code [0x000001c160533a20, 0x000001c160533dd0]
+Event: 87.772 Thread 0x000001c17a8d3000 nmethod 1384 0x000001c160067f50 code [0x000001c1600680c0, 0x000001c1600682d0]
+Event: 92.773 Thread 0x000001c17a8d3800 1385       3       java.util.regex.Pattern$Curly::match (86 bytes)
+Event: 92.774 Thread 0x000001c17a8d3800 nmethod 1385 0x000001c160536550 code [0x000001c160536700, 0x000001c160536d80]
+Event: 92.774 Thread 0x000001c17a8d2000 1386       4       java.util.HashMap::putVal (300 bytes)
+Event: 92.774 Thread 0x000001c17a8ce000 1387       3       sun.misc.URLClassPath$1::next (63 bytes)
+Event: 92.774 Thread 0x000001c17a8ce000 nmethod 1387 0x000001c160536f50 code [0x000001c1605370e0, 0x000001c160537560]
+Event: 92.780 Thread 0x000001c17a8d2000 nmethod 1386 0x000001c16053b010 code [0x000001c16053b1e0, 0x000001c16053be98]
+Event: 97.776 Thread 0x000001c17a8d3000 1388       3       java.util.AbstractCollection::addAll (42 bytes)
+Event: 97.776 Thread 0x000001c17a8d1000 1389       3       com.sun.org.apache.xerces.internal.util.ParserConfigurationSettings::addRecognizedProperties (15 bytes)
+Event: 97.776 Thread 0x000001c17a8d3000 nmethod 1388 0x000001c16053a710 code [0x000001c16053a8c0, 0x000001c16053ae40]
+Event: 97.776 Thread 0x000001c17a8d1000 nmethod 1389 0x000001c160539b50 code [0x000001c160539d00, 0x000001c16053a2e0]
+Event: 97.776 Thread 0x000001c17a8d3000 1390       3       java.util.Stack::<init> (5 bytes)
+Event: 97.777 Thread 0x000001c17a8d3000 nmethod 1390 0x000001c160539650 code [0x000001c1605397c0, 0x000001c160539a30]
+Event: 97.777 Thread 0x000001c17a8d3000 1391       1       java.util.Hashtable::access$400 (5 bytes)
+Event: 97.777 Thread 0x000001c17a8d3000 nmethod 1391 0x000001c160067c90 code [0x000001c160067de0, 0x000001c160067ed8]
+Event: 102.776 Thread 0x000001c17a8ce000 1392       3       java.io.StringWriter::write (11 bytes)
+Event: 102.777 Thread 0x000001c17a8ce000 nmethod 1392 0x000001c1605385d0 code [0x000001c1605387a0, 0x000001c160539080]
+Event: 102.777 Thread 0x000001c17a8d1000 1394       3       jdk.xml.internal.XMLSecurityManager$NameMap::values (10 bytes)
+Event: 102.777 Thread 0x000001c17a8d1000 nmethod 1394 0x000001c1605380d0 code [0x000001c160538240, 0x000001c160538530]
+Event: 102.777 Thread 0x000001c17a8d1000 1395       3       jdk.xml.internal.XMLSecurityManager$Limit::equalsAPIPropertyName (17 bytes)
+Event: 102.777 Thread 0x000001c17a8d3800 1393       1       java.lang.reflect.Constructor::getModifiers (5 bytes)
+Event: 102.778 Thread 0x000001c17a8d3800 nmethod 1393 0x000001c160537e10 code [0x000001c160537f60, 0x000001c160538078]
+Event: 102.778 Thread 0x000001c17a8d1000 nmethod 1395 0x000001c160537950 code [0x000001c160537ac0, 0x000001c160537d50]
+Event: 107.778 Thread 0x000001c17a8d3000 1396       3       com.sun.org.apache.xerces.internal.utils.XMLSecurityManager$Limit::values (10 bytes)
+Event: 107.778 Thread 0x000001c17a8d3000 nmethod 1396 0x000001c16053c5d0 code [0x000001c16053c740, 0x000001c16053ca30]
+Event: 107.779 Thread 0x000001c17a8d1000 1397       3       com.sun.org.apache.xerces.internal.dom.NodeImpl::needsSyncChildren (15 bytes)
+Event: 107.779 Thread 0x000001c17a8d1000 nmethod 1397 0x000001c16053cad0 code [0x000001c16053cc20, 0x000001c16053cdd8]
+Event: 112.780 Thread 0x000001c17a8d3800 1399       3       java.util.ArrayList::add (29 bytes)
+Event: 112.780 Thread 0x000001c17a8d3000 1398       3       com.sun.org.apache.xerces.internal.util.ParserConfigurationSettings::addRecognizedFeatures (56 bytes)
+Event: 112.781 Thread 0x000001c17a8d3000 nmethod 1398 0x000001c16053ce50 code [0x000001c16053cfe0, 0x000001c16053d460]
+Event: 112.781 Thread 0x000001c17a8d3800 nmethod 1399 0x000001c16053d690 code [0x000001c16053d840, 0x000001c16053ddf0]
+Event: 122.782 Thread 0x000001c17a8ce000 1400       3       java.util.regex.Matcher::match (109 bytes)
+Event: 122.782 Thread 0x000001c17a8ce000 nmethod 1400 0x000001c16053e090 code [0x000001c16053e220, 0x000001c16053e630]
+Event: 122.782 Thread 0x000001c17a8d3000 1401       3       com.sun.org.apache.xerces.internal.util.AugmentationsImpl::<init> (17 bytes)
+Event: 122.782 Thread 0x000001c17a8d3800 1405       3       com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator::setFeature (1 bytes)
+Event: 122.783 Thread 0x000001c17a8d3000 nmethod 1401 0x000001c16053e790 code [0x000001c16053e900, 0x000001c16053ed18]
+Event: 122.783 Thread 0x000001c17a8d3000 1408       3       com.sun.org.apache.xerces.internal.util.XMLChar::isName (23 bytes)
+Event: 122.783 Thread 0x000001c17a8d3000 nmethod 1408 0x000001c16053eed0 code [0x000001c16053f040, 0x000001c16053f238]
+Event: 122.783 Thread 0x000001c17a8d3800 nmethod 1405 0x000001c16053f310 code [0x000001c16053f460, 0x000001c16053f5b8]
+Event: 122.783 Thread 0x000001c17a8d3800 1406       3       com.sun.org.apache.xerces.internal.impl.XMLEntityManager::setFeature (72 bytes)
+Event: 122.783 Thread 0x000001c17a8d3800 nmethod 1406 0x000001c16053f650 code [0x000001c16053f840, 0x000001c1605403f0]
+Event: 122.783 Thread 0x000001c17a8d3800 1407       3       com.sun.org.apache.xerces.internal.impl.XMLErrorReporter::setFeature (44 bytes)
+Event: 122.783 Thread 0x000001c17a8ce000 1404       3       com.sun.org.apache.xerces.internal.util.ParserConfigurationSettings::checkFeature (39 bytes)
+Event: 122.783 Thread 0x000001c17a8d1000 1402       3       com.sun.org.apache.xerces.internal.util.AugmentationsImpl$SmallContainer::<init> (25 bytes)
+Event: 122.783 Thread 0x000001c17a8d3800 nmethod 1407 0x000001c160540890 code [0x000001c160540a40, 0x000001c1605412a0]
+Event: 122.783 Thread 0x000001c17a8d3800 1403       3       com.sun.org.apache.xerces.internal.util.AugmentationsImpl$AugmentationsItemsContainer::<init> (10 bytes)
+Event: 122.783 Thread 0x000001c17a8d3800 nmethod 1403 0x000001c160541610 code [0x000001c160541760, 0x000001c160541938]
+Event: 122.783 Thread 0x000001c17a8d3800 1409       1       org.xml.sax.helpers.AttributesImpl::getLength (5 bytes)
+Event: 122.783 Thread 0x000001c17a8d3800 nmethod 1409 0x000001c1605419d0 code [0x000001c160541b20, 0x000001c160541c38]
+Event: 122.784 Thread 0x000001c17a8ce000 nmethod 1404 0x000001c160541c90 code [0x000001c160541e20, 0x000001c1605421c0]
+Event: 122.784 Thread 0x000001c17a8d1000 nmethod 1402 0x000001c1605422d0 code [0x000001c160542440, 0x000001c160542738]
+Event: 127.783 Thread 0x000001c17a8d3800 1410       3       com.badlogic.gdx.utils.reflect.Field::getName (8 bytes)
+Event: 127.783 Thread 0x000001c17a8d3800 nmethod 1410 0x000001c160542850 code [0x000001c1605429a0, 0x000001c160542b98]
+Event: 127.784 Thread 0x000001c17a8d3800 1411       3       com.sun.org.apache.xerces.internal.util.ParserConfigurationSettings::setFeature (42 bytes)
+Event: 127.784 Thread 0x000001c17a8d3000 1412       3       sun.misc.URLClassPath::access$000 (6 bytes)
+Event: 127.784 Thread 0x000001c17a8d3000 nmethod 1412 0x000001c160542c50 code [0x000001c160542dc0, 0x000001c160542f50]
+Event: 127.784 Thread 0x000001c17a8d3800 nmethod 1411 0x000001c160543010 code [0x000001c1605431c0, 0x000001c160543770]
+Event: 137.785 Thread 0x000001c17a8d3000 1413       3       sun.misc.URLClassPath$FileLoader::findResource (18 bytes)
+Event: 137.785 Thread 0x000001c17a8d3000 nmethod 1413 0x000001c1605439d0 code [0x000001c160543b40, 0x000001c160543e20]
+Event: 137.785 Thread 0x000001c17a8ce000 1414       3       com.sun.org.apache.xerces.internal.util.XMLAttributesImpl$Attribute::<init> (27 bytes)
+Event: 137.785 Thread 0x000001c17a8d1000 1415       3       com.sun.org.apache.xerces.internal.dom.ChildNode::parentNode (16 bytes)
+Event: 137.786 Thread 0x000001c17a8ce000 nmethod 1414 0x000001c160543f10 code [0x000001c1605440c0, 0x000001c160544778]
+Event: 137.786 Thread 0x000001c17a8d1000 nmethod 1415 0x000001c160544b10 code [0x000001c160544c80, 0x000001c160544f78]
+Event: 137.786 Thread 0x000001c17a8d3800 1416       3       com.sun.org.apache.xml.internal.serializer.NamespaceMappings$MappingRecord::<init> (26 bytes)
+Event: 137.786 Thread 0x000001c17a8d3800 nmethod 1416 0x000001c160545010 code [0x000001c160545160, 0x000001c160545358]
+Event: 142.787 Thread 0x000001c17a8cd000 1417       4       java.io.WinNTFileSystem::normalize (143 bytes)
+Event: 142.789 Thread 0x000001c17a8cd000 nmethod 1417 0x000001c1605483d0 code [0x000001c160548540, 0x000001c1605488e8]
+Event: 147.788 Thread 0x000001c17a8d3000 1418       1       com.badlogic.gdx.utils.StringBuilder::length (5 bytes)
+Event: 147.788 Thread 0x000001c17a8d3000 nmethod 1418 0x000001c160548110 code [0x000001c160548260, 0x000001c160548378]
+Event: 147.789 Thread 0x000001c17a8cd000 1419  s    4       java.util.Hashtable::get (69 bytes)
+Event: 147.793 Thread 0x000001c17a8cd000 nmethod 1419 0x000001c160545d10 code [0x000001c160545e80, 0x000001c1605467c8]
+Event: 152.790 Thread 0x000001c17a8cd000 1420       4       java.util.HashMap::put (13 bytes)
+Event: 152.791 Thread 0x000001c17a8d1000 1421       1       com.sun.org.apache.xerces.internal.dom.ParentNode::getOwnerDocument (5 bytes)
+Event: 152.791 Thread 0x000001c17a8d1000 nmethod 1421 0x000001c160545a50 code [0x000001c160545ba0, 0x000001c160545cb8]
+Event: 152.791 Thread 0x000001c17a8d1000 1422  s    3       java.util.Hashtable::keys (6 bytes)
+Event: 152.791 Thread 0x000001c17a8d3000 1423       3       java.util.Hashtable::getEnumeration (22 bytes)
+Event: 152.791 Thread 0x000001c17a8ce000 1424       1       com.sun.org.apache.xerces.internal.dom.TextImpl::getNodeType (2 bytes)
+Event: 152.791 Thread 0x000001c17a8d1000 nmethod 1422 0x000001c160547990 code [0x000001c160547b20, 0x000001c160547fb0]
+Event: 152.791 Thread 0x000001c17a8ce000 nmethod 1424 0x000001c160545790 code [0x000001c1605458e0, 0x000001c1605459f8]
+Event: 152.791 Thread 0x000001c17a8d3000 nmethod 1423 0x000001c160547450 code [0x000001c1605475c0, 0x000001c160547890]
+Event: 152.792 Thread 0x000001c17a8cd000 nmethod 1420 0x000001c160546ed0 code [0x000001c160547020, 0x000001c1605471e8]
+Event: 157.792 Thread 0x000001c17a8d3800 1425       3       com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl::getFeatureDefault (40 bytes)
+Event: 157.792 Thread 0x000001c17a8d3800 nmethod 1425 0x000001c16054be10 code [0x000001c16054bfa0, 0x000001c16054c360]
+Event: 157.792 Thread 0x000001c17a8d1000 1426       3       java.util.Hashtable::<init> (114 bytes)
+Event: 157.792 Thread 0x000001c17a8ce000 1427       3       java.util.Dictionary::<init> (5 bytes)
+Event: 157.793 Thread 0x000001c17a8ce000 nmethod 1427 0x000001c16054ba50 code [0x000001c16054bba0, 0x000001c16054bd58]
+Event: 157.793 Thread 0x000001c17a8d1000 nmethod 1426 0x000001c160549910 code [0x000001c160549c00, 0x000001c16054b040]
+Event: 162.794 Thread 0x000001c17a8ce000 1428       3       java.util.Hashtable::<init> (9 bytes)
+Event: 162.794 Thread 0x000001c17a8ce000 nmethod 1428 0x000001c160549550 code [0x000001c1605496e0, 0x000001c160549890]
+Event: 167.795 Thread 0x000001c17a8d1000 1430       3       com.sun.org.apache.xerces.internal.impl.XMLEntityManager::getPropertyDefault (36 bytes)
+Event: 167.795 Thread 0x000001c17a8ce000 1429       3       java.util.ArrayList::grow (45 bytes)
+Event: 167.795 Thread 0x000001c17a8d1000 nmethod 1430 0x000001c160548e90 code [0x000001c160549020, 0x000001c1605493b0]
+Event: 167.795 Thread 0x000001c17a8d1000 1431       1       com.sun.org.apache.xml.internal.serializer.CharInfo::isTextASCIIClean (7 bytes)
+Event: 167.795 Thread 0x000001c17a8ce000 nmethod 1429 0x000001c16054c510 code [0x000001c16054c6c0, 0x000001c16054cbe0]
+Event: 167.796 Thread 0x000001c17a8d1000 nmethod 1431 0x000001c160545410 code [0x000001c160545560, 0x000001c160545698]
+
+GC Heap History (2 events):
+Event: 2.704 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 75264K, used 64512K [0x000000076ca00000, 0x0000000771e00000, 0x00000007c0000000)
+  eden space 64512K, 100% used [0x000000076ca00000,0x0000000770900000,0x0000000770900000)
+  from space 10752K, 0% used [0x0000000771380000,0x0000000771380000,0x0000000771e00000)
+  to   space 10752K, 0% used [0x0000000770900000,0x0000000770900000,0x0000000771380000)
+ ParOldGen       total 172032K, used 0K [0x00000006c5e00000, 0x00000006d0600000, 0x000000076ca00000)
+  object space 172032K, 0% used [0x00000006c5e00000,0x00000006c5e00000,0x00000006d0600000)
+ Metaspace       used 13607K, capacity 13778K, committed 13952K, reserved 1062912K
+  class space    used 1263K, capacity 1346K, committed 1408K, reserved 1048576K
+Event: 2.707 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 75264K, used 6435K [0x000000076ca00000, 0x0000000771e00000, 0x00000007c0000000)
+  eden space 64512K, 0% used [0x000000076ca00000,0x000000076ca00000,0x0000000770900000)
+  from space 10752K, 59% used [0x0000000770900000,0x0000000770f48e90,0x0000000771380000)
+  to   space 10752K, 0% used [0x0000000771380000,0x0000000771380000,0x0000000771e00000)
+ ParOldGen       total 172032K, used 48K [0x00000006c5e00000, 0x00000006d0600000, 0x000000076ca00000)
+  object space 172032K, 0% used [0x00000006c5e00000,0x00000006c5e0c010,0x00000006d0600000)
+ Metaspace       used 13607K, capacity 13778K, committed 13952K, reserved 1062912K
+  class space    used 1263K, capacity 1346K, committed 1408K, reserved 1048576K
+}
+
+Deoptimization events (8 events):
+Event: 0.354 Thread 0x000001c15e41d800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001c160102400 method=java.lang.String.indexOf([CII[CIII)I @ 123
+Event: 1.421 Thread 0x000001c15e41d800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001c160276fd4 method=java.io.WinNTFileSystem.normalize(Ljava/lang/String;)Ljava/lang/String; @ 128
+Event: 1.423 Thread 0x000001c15e41d800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001c1602ee040 method=java.io.BufferedReader.readLine(Z)Ljava/lang/String; @ 153
+Event: 1.480 Thread 0x000001c15e41d800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001c16032de54 method=javazoom.jl.decoder.BitReserve.hputbuf(I)V @ 110
+Event: 1.486 Thread 0x000001c15e41d800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001c160359a78 method=javazoom.jl.decoder.huffcodetab.huffman_decoder(Ljavazoom/jl/decoder/huffcodetab;[I[I[I[ILjavazoom/jl/decoder/BitReserve;)I @ 230
+Event: 1.552 Thread 0x000001c15e41d800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001c16037c240 method=javazoom.jl.decoder.BitReserve.hgetbits(I)I @ 22
+Event: 1.569 Thread 0x000001c15e41d800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001c1603d3094 method=javazoom.jl.decoder.BitReserve.hgetbits(I)I @ 22
+Event: 1.734 Thread 0x000001c15e41d800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001c16043713c method=javazoom.jl.decoder.Bitstream.parse_frame()V @ 44
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (165 events):
+Event: 0.016 Thread 0x000001c15e41d800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x000000076ca07cd8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\sh
+Event: 0.016 Thread 0x000001c15e41d800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x000000076ca07fc0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.c
+Event: 0.291 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076caab120) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.291 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076caab330) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.310 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076cf8d290) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.310 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076cf8d4a0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.321 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d216fa8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.321 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d2173a0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.338 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d474ff0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.338 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d475200) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.339 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d47b530) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.339 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d47b740) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.343 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d490a78) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.344 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d490c88) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.345 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d49ec88) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.345 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d49f080) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.345 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d4aa380) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.345 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d4aa590) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.347 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d4c5030) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.347 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d4c5240) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.347 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d4d6a78) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.347 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d4d6c88) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.364 Thread 0x000001c15e41d800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$static$0(Ljava/lang/String;)Ljava/lang/Boolean;> (0x000000076d536438) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\interpreter\linkResolver.cpp, 
+Event: 0.375 Thread 0x000001c15e41d800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x000000076d5ae218) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\methodHandles.cpp, line 1194]
+Event: 0.377 Thread 0x000001c15e41d800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x000000076d5bb618) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\methodHandles.cpp, line 1194]
+Event: 0.391 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d641760) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.391 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d641970) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.392 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d660200) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.392 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d660410) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.392 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d66ea70) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.392 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d66ec80) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.393 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d67aeb8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.393 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d67b0c8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.394 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6afb50) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.394 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6afd60) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.397 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6c32b0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.397 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6c34c0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.398 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6de7e8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.398 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6de9f8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.398 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6ec840) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.398 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6eca50) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.399 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6f7698) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.399 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d6f78a8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.399 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d702550) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.399 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d702760) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.402 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7195e0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.402 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7197f0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.415 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d799288) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.415 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d799498) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.416 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7b3d98) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.416 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7b3fa8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.416 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7be8b0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.416 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7beca8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.417 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7cc230) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.417 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7cc440) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.418 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7d77b0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.418 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7d79c0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.418 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7da6f0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.418 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7da900) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.418 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7dd5a8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.418 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7dd7b8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.418 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7e0460) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.418 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7e06b8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.418 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7e3288) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.418 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7e3498) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.418 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7ead08) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.418 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7eaf18) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.420 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7fe0f8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.420 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d7fe308) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.420 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d800be0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.420 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d800df0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.420 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d803640) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.420 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d803850) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.420 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8060a0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.420 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8062b0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.420 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d808a28) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.420 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d808c38) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.421 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d810920) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.421 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d810b30) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.421 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d813648) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.421 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d813858) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.421 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8162e8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.421 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8164f8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.421 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d818f88) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.421 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d819198) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.421 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d81bb50) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.421 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d81bd60) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.434 Thread 0x000001c15e41d800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076d8376d0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.435 Thread 0x000001c15e41d800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076d837f68) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.439 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d85ab60) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.439 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d85ad70) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.439 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d868060) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.439 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d868270) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.439 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d86ac88) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.439 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d86ae98) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.439 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d86d828) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.439 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d86da38) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.439 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8703c8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.439 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8705d8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.439 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d872e90) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.439 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8730a0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.441 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d891388) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.441 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d891598) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.444 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8bf968) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.444 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8bfb78) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8d0c48) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8d0e58) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8d3830) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8d3a40) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8d6390) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8d65a0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8d8ef0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8d9100) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8db978) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.446 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8dbb88) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.447 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8f1fa0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.447 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d8f21b0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.449 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d920880) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.449 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d920a90) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.449 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d92b628) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.449 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d92b838) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.450 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d937378) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.450 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d937588) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.450 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d941f58) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.450 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d942168) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.451 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d959380) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.451 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d959590) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.451 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d965648) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.451 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d965858) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.452 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d970a68) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.452 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d970c78) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.456 Thread 0x000001c15e41d800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076d9a1bb0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.456 Thread 0x000001c15e41d800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076d9a22d0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.456 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9a8370) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.456 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9a8768) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.457 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9bf610) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.457 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9bfa08) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.457 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9d6760) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.457 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9d6b58) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.459 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9f1df8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.459 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076d9f2008) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.466 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076da571b0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.466 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076da575a8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.469 Thread 0x000001c15e41d800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076da80168) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.469 Thread 0x000001c15e41d800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076da80838) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.485 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076db28030) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.485 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076db28240) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.493 Thread 0x000001c15e41d800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076db4a458) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.493 Thread 0x000001c15e41d800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076db4ab50) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 0.497 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076db5da70) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.497 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076db5de68) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.497 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076db695f8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.497 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076db69808) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.979 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076dbbe510) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 0.979 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076dbbe720) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 1.068 Thread 0x000001c15e41d800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076dd5d698) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 1.068 Thread 0x000001c15e41d800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076dd5ddd0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 1.069 Thread 0x000001c15e41d800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076dd6fed8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 1.069 Thread 0x000001c15e41d800 Exception <a 'sun/nio/fs/WindowsException'> (0x000000076dd704c8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 1.172 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076dee2268) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 1.172 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076dee2478) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 1.314 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076e8a4100) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 1.314 Thread 0x000001c15e41d800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076e8a44f8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1521]
+Event: 1.384 Thread 0x000001c15e41d800 Exception <a 'java/io/FileNotFoundException'> (0x000000076e9b4f10) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+Event: 2.573 Thread 0x000001c15e41d800 Exception <a 'java/io/FileNotFoundException'> (0x0000000770768310) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.cpp, line 712]
+
+Events (250 events):
+Event: 75.982 Executing VM operation: EnterInterpOnlyMode done
+Event: 75.982 Executing VM operation: GetCurrentLocation
+Event: 75.982 Executing VM operation: GetCurrentLocation done
+Event: 75.982 Executing VM operation: ChangeSingleStep
+Event: 75.982 Executing VM operation: ChangeSingleStep done
+Event: 75.982 Executing VM operation: ChangeSingleStep
+Event: 75.982 Executing VM operation: ChangeSingleStep done
+Event: 75.982 Executing VM operation: GetCurrentLocation
+Event: 75.982 Executing VM operation: GetCurrentLocation done
+Event: 75.982 Executing VM operation: ChangeSingleStep
+Event: 75.982 Executing VM operation: ChangeSingleStep done
+Event: 75.982 Executing VM operation: ChangeSingleStep
+Event: 75.982 Executing VM operation: ChangeSingleStep done
+Event: 75.982 Executing VM operation: GetCurrentLocation
+Event: 75.982 Executing VM operation: GetCurrentLocation done
+Event: 75.982 Executing VM operation: ChangeSingleStep
+Event: 75.982 Executing VM operation: ChangeSingleStep done
+Event: 75.982 Executing VM operation: ChangeSingleStep
+Event: 75.982 Executing VM operation: ChangeSingleStep done
+Event: 75.982 Executing VM operation: GetCurrentLocation
+Event: 75.982 Executing VM operation: GetCurrentLocation done
+Event: 75.983 Executing VM operation: ChangeSingleStep
+Event: 75.983 Executing VM operation: ChangeSingleStep done
+Event: 75.983 Executing VM operation: ChangeSingleStep
+Event: 75.983 Executing VM operation: ChangeSingleStep done
+Event: 75.983 Executing VM operation: GetCurrentLocation
+Event: 75.983 Executing VM operation: GetCurrentLocation done
+Event: 75.983 Executing VM operation: ChangeSingleStep
+Event: 75.983 Executing VM operation: ChangeSingleStep done
+Event: 75.983 Executing VM operation: ChangeSingleStep
+Event: 75.983 Executing VM operation: ChangeSingleStep done
+Event: 76.411 Executing VM operation: GetOrSetLocal
+Event: 76.411 Executing VM operation: GetOrSetLocal done
+Event: 76.411 Executing VM operation: GetOrSetLocal
+Event: 76.411 Executing VM operation: GetOrSetLocal done
+Event: 76.411 Executing VM operation: GetOrSetLocal
+Event: 76.411 Executing VM operation: GetOrSetLocal done
+Event: 76.411 Executing VM operation: GetOrSetLocal
+Event: 76.411 Executing VM operation: GetOrSetLocal done
+Event: 76.411 Executing VM operation: GetOrSetLocal
+Event: 76.411 Executing VM operation: GetOrSetLocal done
+Event: 76.411 Executing VM operation: GetOrSetLocal
+Event: 76.411 Executing VM operation: GetOrSetLocal done
+Event: 76.411 Executing VM operation: GetOrSetLocal
+Event: 76.411 Executing VM operation: GetOrSetLocal done
+Event: 76.411 Executing VM operation: GetOrSetLocal
+Event: 76.411 Executing VM operation: GetOrSetLocal done
+Event: 76.411 Executing VM operation: GetOrSetLocal
+Event: 76.411 Executing VM operation: GetOrSetLocal done
+Event: 76.411 Executing VM operation: GetOrSetLocal
+Event: 76.411 Executing VM operation: GetOrSetLocal done
+Event: 76.411 Executing VM operation: GetOrSetLocal
+Event: 76.411 Executing VM operation: GetOrSetLocal done
+Event: 76.411 Executing VM operation: GetOrSetLocal
+Event: 76.411 Executing VM operation: GetOrSetLocal done
+Event: 76.411 Executing VM operation: GetOrSetLocal
+Event: 76.411 Executing VM operation: GetOrSetLocal done
+Event: 76.411 Executing VM operation: GetOrSetLocal
+Event: 76.411 Executing VM operation: GetOrSetLocal done
+Event: 76.411 Executing VM operation: GetOrSetLocal
+Event: 76.411 Executing VM operation: GetOrSetLocal done
+Event: 76.411 Executing VM operation: GetOrSetLocal
+Event: 76.411 Executing VM operation: GetOrSetLocal done
+Event: 77.349 Executing VM operation: GetOrSetLocal
+Event: 77.349 Executing VM operation: GetOrSetLocal done
+Event: 77.350 Executing VM operation: EnterInterpOnlyMode
+Event: 77.350 Executing VM operation: EnterInterpOnlyMode done
+Event: 77.350 Executing VM operation: GetCurrentLocation
+Event: 77.350 Executing VM operation: GetCurrentLocation done
+Event: 77.350 Executing VM operation: ChangeSingleStep
+Event: 77.350 Executing VM operation: ChangeSingleStep done
+Event: 77.350 Executing VM operation: ChangeSingleStep
+Event: 77.350 Executing VM operation: ChangeSingleStep done
+Event: 77.350 Executing VM operation: GetCurrentLocation
+Event: 77.350 Executing VM operation: GetCurrentLocation done
+Event: 77.350 Executing VM operation: ChangeSingleStep
+Event: 77.350 Executing VM operation: ChangeSingleStep done
+Event: 77.351 Executing VM operation: ChangeSingleStep
+Event: 77.351 Executing VM operation: ChangeSingleStep done
+Event: 77.351 Executing VM operation: GetCurrentLocation
+Event: 77.351 Executing VM operation: GetCurrentLocation done
+Event: 77.351 Executing VM operation: ChangeSingleStep
+Event: 77.351 Executing VM operation: ChangeSingleStep done
+Event: 77.351 Executing VM operation: ChangeSingleStep
+Event: 77.351 Executing VM operation: ChangeSingleStep done
+Event: 77.351 Executing VM operation: GetCurrentLocation
+Event: 77.351 Executing VM operation: GetCurrentLocation done
+Event: 77.351 Executing VM operation: ChangeSingleStep
+Event: 77.351 Executing VM operation: ChangeSingleStep done
+Event: 77.351 Executing VM operation: ChangeSingleStep
+Event: 77.351 Executing VM operation: ChangeSingleStep done
+Event: 77.351 Executing VM operation: GetCurrentLocation
+Event: 77.351 Executing VM operation: GetCurrentLocation done
+Event: 77.351 Executing VM operation: ChangeSingleStep
+Event: 77.351 Executing VM operation: ChangeSingleStep done
+Event: 77.351 Executing VM operation: ChangeSingleStep
+Event: 77.351 Executing VM operation: ChangeSingleStep done
+Event: 77.351 loading class com/mygdx/game/Utils/Constants
+Event: 77.351 loading class com/mygdx/game/Utils/Constants done
+Event: 77.353 loading class com/mygdx/game/Utils/Constants$1
+Event: 77.353 loading class com/mygdx/game/Utils/Constants$1 done
+Event: 77.355 Executing VM operation: Deoptimize
+Event: 77.356 Executing VM operation: Deoptimize done
+Event: 77.357 Executing VM operation: GetCurrentLocation
+Event: 77.357 Executing VM operation: GetCurrentLocation done
+Event: 77.357 Executing VM operation: ChangeSingleStep
+Event: 77.357 Executing VM operation: ChangeSingleStep done
+Event: 77.357 Executing VM operation: ChangeSingleStep
+Event: 77.357 Executing VM operation: ChangeSingleStep done
+Event: 77.769 Thread 0x000001c17a8ce000 flushing nmethod 0x000001c160058790
+Event: 77.769 Thread 0x000001c17a8ce000 flushing nmethod 0x000001c1600598d0
+Event: 77.769 Thread 0x000001c17a8ce000 flushing nmethod 0x000001c16005b150
+Event: 77.769 Thread 0x000001c17a8ce000 flushing nmethod 0x000001c16005b490
+Event: 77.769 Thread 0x000001c17a8ce000 flushing nmethod 0x000001c16005be10
+Event: 77.769 Thread 0x000001c17a8ce000 flushing nmethod 0x000001c160064990
+Event: 77.769 Thread 0x000001c17a8ce000 flushing nmethod 0x000001c160064d10
+Event: 77.769 Thread 0x000001c17a8ce000 flushing nmethod 0x000001c1600656d0
+Event: 77.769 Thread 0x000001c17a8ce000 flushing nmethod 0x000001c160065f10
+Event: 77.769 Thread 0x000001c17a8ce000 flushing nmethod 0x000001c160067ad0
+Event: 77.769 Thread 0x000001c17a8ce000 flushing nmethod 0x000001c160073ed0
+Event: 77.769 Thread 0x000001c17a8ce000 flushing nmethod 0x000001c160091d10
+Event: 77.783 Executing VM operation: GetOrSetLocal
+Event: 77.783 Executing VM operation: GetOrSetLocal done
+Event: 77.783 Executing VM operation: GetOrSetLocal
+Event: 77.783 Executing VM operation: GetOrSetLocal done
+Event: 77.783 Executing VM operation: GetOrSetLocal
+Event: 77.783 Executing VM operation: GetOrSetLocal done
+Event: 77.783 Executing VM operation: GetOrSetLocal
+Event: 77.783 Executing VM operation: GetOrSetLocal done
+Event: 77.783 Executing VM operation: GetOrSetLocal
+Event: 77.783 Executing VM operation: GetOrSetLocal done
+Event: 77.783 Executing VM operation: GetOrSetLocal
+Event: 77.783 Executing VM operation: GetOrSetLocal done
+Event: 77.783 Executing VM operation: GetOrSetLocal
+Event: 77.783 Executing VM operation: GetOrSetLocal done
+Event: 77.783 Executing VM operation: GetOrSetLocal
+Event: 77.783 Executing VM operation: GetOrSetLocal done
+Event: 77.783 Executing VM operation: GetOrSetLocal
+Event: 77.783 Executing VM operation: GetOrSetLocal done
+Event: 77.783 Executing VM operation: GetOrSetLocal
+Event: 77.783 Executing VM operation: GetOrSetLocal done
+Event: 77.783 Executing VM operation: GetOrSetLocal
+Event: 77.783 Executing VM operation: GetOrSetLocal done
+Event: 77.783 Executing VM operation: GetOrSetLocal
+Event: 77.783 Executing VM operation: GetOrSetLocal done
+Event: 77.783 Executing VM operation: GetOrSetLocal
+Event: 77.783 Executing VM operation: GetOrSetLocal done
+Event: 77.783 Executing VM operation: GetOrSetLocal
+Event: 77.783 Executing VM operation: GetOrSetLocal done
+Event: 77.783 Executing VM operation: GetOrSetLocal
+Event: 77.783 Executing VM operation: GetOrSetLocal done
+Event: 77.784 Executing VM operation: GetOrSetLocal
+Event: 77.784 Executing VM operation: GetOrSetLocal done
+Event: 81.610 Executing VM operation: GetOrSetLocal
+Event: 81.610 Executing VM operation: GetOrSetLocal done
+Event: 81.611 Executing VM operation: EnterInterpOnlyMode
+Event: 81.611 Executing VM operation: EnterInterpOnlyMode done
+Event: 81.611 Executing VM operation: GetCurrentLocation
+Event: 81.611 Executing VM operation: GetCurrentLocation done
+Event: 81.611 Executing VM operation: ChangeSingleStep
+Event: 81.611 Executing VM operation: ChangeSingleStep done
+Event: 81.612 Executing VM operation: ChangeSingleStep
+Event: 81.612 Executing VM operation: ChangeSingleStep done
+Event: 81.613 Executing VM operation: GetCurrentLocation
+Event: 81.613 Executing VM operation: GetCurrentLocation done
+Event: 81.613 Executing VM operation: ChangeSingleStep
+Event: 81.613 Executing VM operation: ChangeSingleStep done
+Event: 81.613 Executing VM operation: ChangeSingleStep
+Event: 81.613 Executing VM operation: ChangeSingleStep done
+Event: 82.067 Executing VM operation: GetOrSetLocal
+Event: 82.067 Executing VM operation: GetOrSetLocal done
+Event: 82.067 Executing VM operation: GetOrSetLocal
+Event: 82.067 Executing VM operation: GetOrSetLocal done
+Event: 82.067 Executing VM operation: GetOrSetLocal
+Event: 82.067 Executing VM operation: GetOrSetLocal done
+Event: 82.067 Executing VM operation: GetOrSetLocal
+Event: 82.067 Executing VM operation: GetOrSetLocal done
+Event: 82.067 Executing VM operation: GetOrSetLocal
+Event: 82.067 Executing VM operation: GetOrSetLocal done
+Event: 82.067 Executing VM operation: GetOrSetLocal
+Event: 82.067 Executing VM operation: GetOrSetLocal done
+Event: 82.067 Executing VM operation: GetOrSetLocal
+Event: 82.067 Executing VM operation: GetOrSetLocal done
+Event: 82.067 Executing VM operation: GetOrSetLocal
+Event: 82.067 Executing VM operation: GetOrSetLocal done
+Event: 82.067 Executing VM operation: GetOrSetLocal
+Event: 82.067 Executing VM operation: GetOrSetLocal done
+Event: 82.067 Executing VM operation: GetOrSetLocal
+Event: 82.067 Executing VM operation: GetOrSetLocal done
+Event: 82.068 Executing VM operation: GetOrSetLocal
+Event: 82.068 Executing VM operation: GetOrSetLocal done
+Event: 82.068 Executing VM operation: GetOrSetLocal
+Event: 82.068 Executing VM operation: GetOrSetLocal done
+Event: 82.068 Executing VM operation: GetOrSetLocal
+Event: 82.068 Executing VM operation: GetOrSetLocal done
+Event: 82.068 Executing VM operation: GetOrSetLocal
+Event: 82.068 Executing VM operation: GetOrSetLocal done
+Event: 82.068 Executing VM operation: GetOrSetLocal
+Event: 82.068 Executing VM operation: GetOrSetLocal done
+Event: 82.068 Executing VM operation: GetOrSetLocal
+Event: 82.068 Executing VM operation: GetOrSetLocal done
+Event: 84.928 Executing VM operation: GetOrSetLocal
+Event: 84.928 Executing VM operation: GetOrSetLocal done
+Event: 84.928 Executing VM operation: EnterInterpOnlyMode
+Event: 84.929 Executing VM operation: EnterInterpOnlyMode done
+Event: 84.929 Executing VM operation: GetCurrentLocation
+Event: 84.929 Executing VM operation: GetCurrentLocation done
+Event: 84.929 Executing VM operation: ChangeSingleStep
+Event: 84.929 Executing VM operation: ChangeSingleStep done
+Event: 84.929 Executing VM operation: ChangeSingleStep
+Event: 84.929 Executing VM operation: ChangeSingleStep done
+Event: 84.929 Executing VM operation: GetCurrentLocation
+Event: 84.929 Executing VM operation: GetCurrentLocation done
+Event: 84.929 Executing VM operation: ChangeSingleStep
+Event: 84.929 Executing VM operation: ChangeSingleStep done
+Event: 84.929 Executing VM operation: ChangeSingleStep
+Event: 84.929 Executing VM operation: ChangeSingleStep done
+Event: 85.365 Executing VM operation: GetOrSetLocal
+Event: 85.365 Executing VM operation: GetOrSetLocal done
+Event: 85.365 Executing VM operation: GetOrSetLocal
+Event: 85.365 Executing VM operation: GetOrSetLocal done
+Event: 85.365 Executing VM operation: GetOrSetLocal
+Event: 85.365 Executing VM operation: GetOrSetLocal done
+Event: 85.365 Executing VM operation: GetOrSetLocal
+Event: 85.365 Executing VM operation: GetOrSetLocal done
+Event: 85.365 Executing VM operation: GetOrSetLocal
+Event: 85.365 Executing VM operation: GetOrSetLocal done
+Event: 85.365 Executing VM operation: GetOrSetLocal
+Event: 85.365 Executing VM operation: GetOrSetLocal done
+Event: 85.365 Executing VM operation: GetOrSetLocal
+Event: 85.365 Executing VM operation: GetOrSetLocal done
+Event: 85.365 Executing VM operation: GetOrSetLocal
+Event: 85.365 Executing VM operation: GetOrSetLocal done
+Event: 85.365 Executing VM operation: GetOrSetLocal
+Event: 85.365 Executing VM operation: GetOrSetLocal done
+Event: 85.365 Executing VM operation: GetOrSetLocal
+Event: 85.365 Executing VM operation: GetOrSetLocal done
+Event: 85.365 Executing VM operation: GetOrSetLocal
+Event: 85.365 Executing VM operation: GetOrSetLocal done
+Event: 85.365 Executing VM operation: GetOrSetLocal
+Event: 85.365 Executing VM operation: GetOrSetLocal done
+Event: 85.365 Executing VM operation: GetOrSetLocal
+Event: 85.365 Executing VM operation: GetOrSetLocal done
+Event: 85.365 Executing VM operation: GetOrSetLocal
+Event: 85.365 Executing VM operation: GetOrSetLocal done
+Event: 85.365 Executing VM operation: GetOrSetLocal
+Event: 85.365 Executing VM operation: GetOrSetLocal done
+Event: 85.366 Executing VM operation: GetOrSetLocal
+Event: 85.366 Executing VM operation: GetOrSetLocal done
+Event: 169.819 Thread 0x000001c17a8ad000 Thread exited: 0x000001c17a8ad000
+
+
+Dynamic libraries:
+0x00007ff6c67f0000 - 0x00007ff6c688a000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\bin\java.exe
+0x00007ff923890000 - 0x00007ff923aa4000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff9220b0000 - 0x00007ff922173000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff920f00000 - 0x00007ff92129c000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff923680000 - 0x00007ff92372e000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff922980000 - 0x00007ff922a27000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff9234d0000 - 0x00007ff923574000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff922b20000 - 0x00007ff922c35000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff9231f0000 - 0x00007ff92339d000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff9212a0000 - 0x00007ff9212c6000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff921f80000 - 0x00007ff921fa9000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff921370000 - 0x00007ff921483000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff9212d0000 - 0x00007ff92136a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff921580000 - 0x00007ff921691000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff8fab00000 - 0x00007ff8fad8e000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.608_none_a9444ca7c10bb01d\COMCTL32.dll
+0x00007ff922c40000 - 0x00007ff922c71000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff90c610000 - 0x00007ff90c625000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\vcruntime140.dll
+0x00007ff8f7ed0000 - 0x00007ff8f7f6b000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\msvcp140.dll
+0x00000000598f0000 - 0x000000005a1b9000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\server\jvm.dll
+0x00007ff922750000 - 0x00007ff922758000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff9189d0000 - 0x00007ff9189d9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff917010000 - 0x00007ff917044000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff917240000 - 0x00007ff91724a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff923450000 - 0x00007ff9234c1000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff91fda0000 - 0x00007ff91fdb8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff90c4e0000 - 0x00007ff90c4f0000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\verify.dll
+0x00007ff901dd0000 - 0x00007ff901dfb000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\java.dll
+0x00007ff90c530000 - 0x00007ff90c566000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\jdwp.dll
+0x00007ff9194e0000 - 0x00007ff9194e9000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\npt.dll
+0x00007ff8fd980000 - 0x00007ff8fd998000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\zip.dll
+0x00007ff921780000 - 0x00007ff921f70000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ff91eca0000 - 0x00007ff91f56e000 	C:\WINDOWS\SYSTEM32\windows.storage.dll
+0x00007ff922180000 - 0x00007ff922509000 	C:\WINDOWS\System32\combase.dll
+0x00007ff91eb60000 - 0x00007ff91ec9e000 	C:\WINDOWS\SYSTEM32\wintypes.dll
+0x00007ff923580000 - 0x00007ff923671000 	C:\WINDOWS\System32\SHCORE.dll
+0x00007ff923190000 - 0x00007ff9231ee000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007ff920c00000 - 0x00007ff920c21000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x00007ff9194d0000 - 0x00007ff9194da000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\dt_socket.dll
+0x00007ff8f0370000 - 0x00007ff8f0387000 	C:\WINDOWS\system32\napinsp.dll
+0x00007ff8efc90000 - 0x00007ff8efcab000 	C:\WINDOWS\system32\pnrpnsp.dll
+0x00007ff920280000 - 0x00007ff9202e9000 	C:\WINDOWS\System32\mswsock.dll
+0x00007ff91f860000 - 0x00007ff91f953000 	C:\WINDOWS\SYSTEM32\DNSAPI.dll
+0x00007ff91f830000 - 0x00007ff91f85d000 	C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+0x00007ff922c80000 - 0x00007ff922c89000 	C:\WINDOWS\System32\NSI.dll
+0x00007ff8efc70000 - 0x00007ff8efc81000 	C:\WINDOWS\System32\winrnr.dll
+0x00007ff917380000 - 0x00007ff917395000 	C:\WINDOWS\system32\wshbth.dll
+0x00007ff8efc40000 - 0x00007ff8efc61000 	C:\WINDOWS\system32\nlansp_c.dll
+0x00007ff9163b0000 - 0x00007ff916433000 	C:\WINDOWS\System32\fwpuclnt.dll
+0x00007ff912a90000 - 0x00007ff912a9a000 	C:\Windows\System32\rasadhlp.dll
+0x00000000598c0000 - 0x00000000598e9000 	C:\Users\aloys\AppData\Local\Temp\libgdxaloys\e787ab0a\gdx64.dll
+0x00007ff8f8810000 - 0x00007ff8f882c000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\net.dll
+0x00007ff8f82d0000 - 0x00007ff8f82e3000 	D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\jre\bin\nio.dll
+0x00007ff902d30000 - 0x00007ff902da5000 	C:\Users\aloys\AppData\Local\Temp\lwjglaloys\3.3.1-build-7\lwjgl.dll
+0x00007ff8f6870000 - 0x00007ff8f6ac9000 	C:\Users\aloys\AppData\Local\Temp\lwjglaloys\3.3.1-build-7\jemalloc.dll
+0x00007ff902cc0000 - 0x00007ff902d21000 	C:\Users\aloys\AppData\Local\Temp\lwjglaloys\3.3.1-build-7\glfw.dll
+0x00007ff904670000 - 0x00007ff9046b6000 	C:\WINDOWS\SYSTEM32\dinput8.dll
+0x00007ff9189e0000 - 0x00007ff9189f1000 	C:\WINDOWS\SYSTEM32\xinput1_4.dll
+0x00007ff9209e0000 - 0x00007ff920a0c000 	C:\WINDOWS\SYSTEM32\DEVOBJ.dll
+0x00007ff920990000 - 0x00007ff9209de000 	C:\WINDOWS\SYSTEM32\cfgmgr32.dll
+0x00007ff91ba50000 - 0x00007ff91ba7b000 	C:\WINDOWS\SYSTEM32\dwmapi.dll
+0x00007ff90a2b0000 - 0x00007ff90a4b1000 	C:\WINDOWS\SYSTEM32\inputhost.dll
+0x00007ff91b260000 - 0x00007ff91b393000 	C:\WINDOWS\SYSTEM32\CoreMessaging.dll
+0x00007ff91b710000 - 0x00007ff91b7bb000 	C:\WINDOWS\system32\uxtheme.dll
+0x00007ff921500000 - 0x00007ff92157b000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff923730000 - 0x00007ff92384e000 	C:\WINDOWS\System32\MSCTF.dll
+0x00007ff920500000 - 0x00007ff92050c000 	C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL
+0x00007ff8f38a0000 - 0x00007ff8f3a37000 	C:\Users\aloys\AppData\Local\Temp\lwjglaloys\3.3.1-build-7\OpenAL.dll
+0x00007ff922580000 - 0x00007ff92271c000 	C:\WINDOWS\System32\ole32.dll
+0x00007ff9233a0000 - 0x00007ff923450000 	C:\WINDOWS\System32\clbcatq.dll
+0x00007ff90d050000 - 0x00007ff90d0ed000 	C:\WINDOWS\System32\MMDevApi.dll
+0x00007ff900c50000 - 0x00007ff900e35000 	C:\WINDOWS\SYSTEM32\AUDIOSES.DLL
+0x00007ff91bca0000 - 0x00007ff91bcb5000 	C:\WINDOWS\SYSTEM32\resourcepolicyclient.dll
+0x00007ff91fbc0000 - 0x00007ff91fc0d000 	C:\WINDOWS\SYSTEM32\powrprof.dll
+0x00007ff91fba0000 - 0x00007ff91fbb3000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ff8dcf60000 - 0x00007ff8dd060000 	C:\WINDOWS\SYSTEM32\opengl32.dll
+0x00007ff8dcf20000 - 0x00007ff8dcf4d000 	C:\WINDOWS\SYSTEM32\GLU32.dll
+0x00007ff91b810000 - 0x00007ff91b846000 	C:\WINDOWS\SYSTEM32\dxcore.dll
+0x00007ff919460000 - 0x00007ff9194a9000 	C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll
+0x00007ff917970000 - 0x00007ff917aa4000 	C:\Windows\System32\AppXDeploymentClient.dll
+0x00007ff900730000 - 0x00007ff900826000 	C:\Windows\System32\Windows.ApplicationModel.dll
+0x00007ff9216a0000 - 0x00007ff921777000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ff9197a0000 - 0x00007ff9198a0000 	C:\WINDOWS\system32\propsys.dll
+0x00007ff91b630000 - 0x00007ff91b6c7000 	C:\WINDOWS\SYSTEM32\apphelp.dll
+0x00007ff8dfb20000 - 0x00007ff8dfb3a000 	C:\WINDOWS\system32\NetworkExplorer.dll
+0x00007ff8ee150000 - 0x00007ff8ee176000 	C:\WINDOWS\system32\mssprxy.dll
+0x00007ff8b8430000 - 0x00007ff8b94b7000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_80ba20874d893d6e\igxelpicd64.dll
+0x00007ff91b850000 - 0x00007ff91b947000 	C:\WINDOWS\system32\dxgi.dll
+0x00007ff8ef560000 - 0x00007ff8ef69c000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_80ba20874d893d6e\igdml64.dll
+0x00007ff909e30000 - 0x00007ff90a239000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_80ba20874d893d6e\igdgmm64.dll
+0x00007ff921490000 - 0x00007ff9214fb000 	C:\WINDOWS\System32\WINTRUST.dll
+0x00007ff920d90000 - 0x00007ff920ef6000 	C:\WINDOWS\System32\CRYPT32.dll
+0x00007ff920970000 - 0x00007ff920982000 	C:\WINDOWS\SYSTEM32\MSASN1.dll
+0x00007ff905470000 - 0x00007ff909af4000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_80ba20874d893d6e\igc64.dll
+0x00007ff902c60000 - 0x00007ff902cbd000 	C:\Users\aloys\AppData\Local\Temp\lwjglaloys\3.3.1-build-7\lwjgl_opengl.dll
+0x00007ff90d360000 - 0x00007ff90d48e000 	C:\WINDOWS\SYSTEM32\textinputframework.dll
+0x00007ff90e950000 - 0x00007ff90ecbc000 	C:\WINDOWS\SYSTEM32\CoreUIComponents.dll
+0x0000000059800000 - 0x00000000598b2000 	C:\Users\aloys\AppData\Local\Temp\libgdxaloys\ac200fef\gdx-freetype64.dll
+0x00000000597a0000 - 0x00000000597fa000 	C:\Users\aloys\AppData\Local\Temp\libgdxaloys\888fe1bc\gdx-box2d64.dll
+0x00007ff91e690000 - 0x00007ff91e8be000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:64360 
+java_command: com.mygdx.game.DesktopLauncher
+java_class_path (initial): C:\Users\aloys\AppData\Local\Temp\cp_70zierdccrcbr6pxl0lvjj8mv.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\bin
+PATH=D:\Applications\VMWare 17\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Applications\Android Studio\gradle-7.6-all\gradle-7.6\bin;D:\Applications\Android Studio\1\java-1.8.0-openjdk-1.8.0.352-2.b08.redhat.windows.x86_64\bin;D:\SIT\Year1Tri2\INF1009_ObjectOriented\gdx-setup.jar;D:\Code\Downloads\MSYS2_C_Prog\MSYS2\mingw64\bin;C:\Program Files\Git\cmd;C:\Users\aloys\AppData\Local\Microsoft\WindowsApps;D:\Applications\Microsoft VS Code\bin;C:\Users\aloys\.dotnet\tools;D:\Downloads\MSYS2_C_Prog\MSYS2\mingw64\bin;C:\Users\aloys\AppData\Local\GitHubDesktop\bin
+USERNAME=aloys
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 141 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 22621 (10.0.22621.1344)
+
+CPU:total 16 (initial active 16) (8 cores per cpu, 2 threads per core) family 6 model 141 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16389852k(8079056k free), swap 30545628k(18857856k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.352-b08) for windows-amd64 JRE (1.8.0_352-b08), built on Oct 16 2022 12:09:30 by "build" with MS VC++ 15.9 (VS2017)
+
+time: Mon Mar 20 16:50:22 2023
+timezone: Malay Peninsula Standard Time
+elapsed time: 169.841036 seconds (0d 0h 2m 49s)
+
